@@ -1,0 +1,51 @@
+@use "../abstract" as *
+
+html
+  font-family: $ff-body
+  scroll-behavior: smooth
+
+body
+  background-color: $c-bg
+  color: $c-text
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+    display: none
+
+button
+  display: block
+  cursor: pointer
+  border: none
+  background: none
+  font: inherit
+
+a
+  text-decoration: none
+  color: inherit
+
+.container
+  max-width: $max-width
+  margin: 0 auto
+
+.section
+  width: 100%
+  padding: $p-huge
+
+  &__title
+    max-width: 516px
+    text-align: center
+    margin: 0 auto
+    
+    span
+      color: $c-accent
+      text-transform: uppercase
+      font-weight: $fw-500
+      font-size: $fs-7
+      letter-spacing: .2rem
+    
+    h1, .h1
+      line-height: 1.125
+
+.has-bg-alt
+  background: $c-bg-alt
