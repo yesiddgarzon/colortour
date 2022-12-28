@@ -11,3 +11,7 @@
 
     .section__title > *  
       color: $c-bg
+  
+  +until($desktop)
+    .flex
+      flex-direction: column

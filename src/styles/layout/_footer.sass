@@ -54,3 +54,9 @@
     a:is(:hover, :focus)
       color: $c-accent
 
+  +until($desktop)
+    .footer__content
+      flex-direction: column
+
+      .col-70
+        width: 100%
