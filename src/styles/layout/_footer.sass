@@ -1,0 +1,56 @@
+@use "../abstract" as *
+
+.footer
+  background-color: $c-secondary-alt
+
+  & *
+    color: $c-primary
+    transition: $transition
+  
+  &__resume
+    padding-bottom: calc($p-big * 2)
+
+    .social__links
+      gap: 8px
+      
+      .social__link
+        border: $b-small $c-primary
+        border-radius: $radius-rounded
+        font-size: $fs-4
+        padding: $p-small
+        display: grid
+        align-items: center
+
+        &:hover
+          border: $b-small $c-accent
+          color: $c-accent
+
+          i
+            color: $c-accent
+  
+  &__quicklinks, &__contact
+    a
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: start
+
+      &:is(:hover, :focus)
+        color: $c-accent
+    
+    i
+      font-size: $fs-5
+      padding: $p-xs
+  
+  &__copy
+    width: 100%
+    text-align: center
+    background-color: darken($c-secondary-alt, 5%)
+    padding: $p-xs
+
+    p
+      margin: 0 auto
+    
+    a:is(:hover, :focus)
+      color: $c-accent
+

@@ -1,0 +1,38 @@
+{
+  "name": "colortour",
+  "version": "1.0.0",
+  "description": "Colortour sitio oficial",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "sass": "sass src/styles/main.sass dist/css/main.min.css --style compressed --no-source-map",
+    "autoprefix": "postcss -u autoprefixer -r dist/css/* ",
+    "imagemin": "imagemin src/images/* -o dist/img",
+    "cp:favi": "cp src/favicon.* dist",
+    "build:css": "run-s sass autoprefix",
+    "build:js": "mkdir -p dist/js && uglifyjs src/scripts/*.js -m -c -o dist/js/main.min.js",
+    "build:img": "run-s imagemin cp:favi",
+    "build:html": "html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --input-dir src --output-dir dist --file-ext html",
+    "watch:sass": "onchange 'src/styles/**/*.sass' -- npm run build:css",
+    "watch:js": "onchange 'src/scripts/*.js' -- npm run build:js",
+    "watch:img": "onchange 'src/images' -- npm run build:img",
+    "watch:html": "onchange 'src/**/*.html' -- npm run build:html",
+    "serve": "browser-sync dist -w -b '/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'",
+    "build": "run-s clean build:*",
+    "start": "run-p serve watch:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.11",
+    "html-minifier-terser": "^7.1.0",
+    "imagemin-cli": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.57.1",
+    "uglify-js": "^3.17.4"
+  }
+}

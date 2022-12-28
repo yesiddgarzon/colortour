@@ -1,0 +1,38 @@
+@use "../abstract" as *
+
+.main-nav
+  font-weight: $fw-500
+
+  .nav__link
+    &:is(:hover, :focus), &.is-active
+      color: $c-accent
+
+  +until($tablet)
+    position: fixed
+    left: 0
+    top: -100%
+    width: 100%
+    heigth: 50%
+    background-color: transparent
+    padding: $p-big
+    margin-top: 70px
+    transition: $transition
+    z-index: 10
+    
+    .nav__menu
+      flex-direction: column
+      padding: $p-big
+      background-color: $c-bg
+      border: $b-medium rgba($c-secondary, 0.1)
+      border-radius: $radius-huge
+      box-shadow: $bs-medium
+    
+    .nav__link
+      color: $c-text
+
+    &.is-active
+      top: 0
+  
+  +desktop
+    .nav__menu
+      flex-direction: row

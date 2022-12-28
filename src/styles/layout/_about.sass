@@ -1,0 +1,101 @@
+@use "../abstract" as *
+  
+.about
+  margin-top: $p-big
+
+  &__about
+    
+    .about__img img
+      border-radius: $radius-huge
+    
+    +until($tablet)
+      flex-direction: column
+    
+    +desktop
+      .section__title
+        text-align: initial
+        margin: 0
+  
+  &__team
+    .team__cards
+      padding-bottom: $p-big
+
+      .team__card
+        position: relative
+        width: 100%
+        border: $b-small lighten($c-text, 70%)      
+        border-radius: $radius-huge
+        background-color: $c-bg 
+        cursor: pointer
+        overflow: hidden
+
+        &:is(:hover, :focus)
+          .card__content
+            bottom: 0
+
+        .card__avatar
+          width: 100%
+        
+        .card__content
+          position: absolute
+          left: 0
+          bottom: -60px
+          z-index: 10
+          background-color: $c-bg
+          width: 100%
+          padding: $p-medium 0
+          text-align: center
+          transition: $transition
+
+          .card__profile
+
+            .card__position
+              color: lighten($c-text, 55%)
+
+            & > *
+              margin: 0
+
+
+          .card__social
+            padding-top: $p-medium
+            
+            .social__link i
+              font-size: $fs-3
+              color: lighten($c-text, 30%)
+
+              &:is(:hover, :focus)
+                color: $c-accent
+    
+    .swiper-pagination-bullet
+      width: 14px
+      height: 14px
+
+    .swiper-pagination-bullet-active
+      background: $c-accent
+  
+  &__testimonials
+
+    .testimonials__slider
+      padding: $p-small
+
+      .testimonial__card
+        max-width: calc($max-width / 3)
+        width: 100%
+        background-color: $c-bg
+        border: $b-small lighten($c-text, 70%)
+        box-shadow: $bs-medium
+        border-radius: $radius-big
+        padding: $p-medium
+        text-align: center
+
+        .card__testimonial
+          color: lighten($c-text, 30%)
+          font-weight: $fw-500
+
+        .card__avatar
+          width: 128px
+          height: 128px
+          border-radius: $radius-rounded
+        
+        .card__name
+          margin: 0
