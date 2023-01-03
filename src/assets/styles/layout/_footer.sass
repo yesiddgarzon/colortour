@@ -30,10 +30,10 @@
   
   &__quicklinks, &__contact
     a
-      height: 30px
       display: flex
       align-items: center
-      justify-content: start
+      justify-content: flex-start
+      padding: $p-xs 0
 
       &:is(:hover, :focus)
         color: $c-accent
@@ -41,6 +41,9 @@
     i
       font-size: $fs-5
       padding: $p-xs
+    
+    p > i,a
+      display: inline-block
   
   &__copy
     width: 100%

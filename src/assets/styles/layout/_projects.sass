@@ -1,16 +1,17 @@
 @use "../abstract" as *
 
-.contact
+.projects
   background-color: $c-accent
-  color: $c-bg
+  color: $c-primary
 
   &__cta__content
     .section__title
       margin: 0
-      text-align: initial
+      text-align: left
+
 
     .section__title > *  
-      color: $c-bg
+      color: $c-primary !important
   
   +until($tablet)
     .flex

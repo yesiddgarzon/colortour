@@ -6,7 +6,7 @@
   font-size: $fs-6
   font-weight: $fw-500
   border-radius: $radius-huge
-  padding: $p-xs $p-medium
+  padding: $p-small $p-medium
   border: $b-medium transparent
   transition: $transition
   background-color: $c-secondary
@@ -37,7 +37,8 @@
     border-color: $c-secondary
 
     &:is(:hover, :focus)
-      background-color: lighten($c-secondary, 70%)
+      background-color: $c-secondary
+      color: $c-primary
   
   &--outline--primary
     color: $c-primary
@@ -45,6 +46,6 @@
     border-color: $c-primary
 
     &:is(:hover, :focus)
-      padding: $p-small $p-medium
+      padding: $p-medium $p-medium
 
   

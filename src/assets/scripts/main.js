@@ -66,14 +66,12 @@ const teamSlider = new Swiper(".team__slider", {
   slidesPerView: 3,
   spaceBetween: 32,
   slidesPerGroup: 3,
-  loop: true,
   centerSlide: "true",
   fade: "true",
   grabCursor: "true",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     0: {
@@ -98,6 +96,10 @@ const testimonialsSwiper = new Swiper(".testimonials__slider", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -145,10 +147,11 @@ const tourCardContainer = document.getElementById("tour-cards"),
       loadMoreBtn = document.getElementById("load-more"),
       cardLoad = 3;
 
-console.log(tourCardContainer, loadMoreBtn, tourCards);
+console.log();
 
 tourCards.forEach((e, i) => {
-  if (i > cardLoad - 1) e.classList.add("is-hidden")
+  if (i > cardLoad - 1) e.classList.add("is-hidden");
+  if (tourCards.length > 3) loadMoreBtn.style.display = "block";
 });
 
 loadMoreBtn.addEventListener("click", () => {

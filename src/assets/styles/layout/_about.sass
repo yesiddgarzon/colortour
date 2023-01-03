@@ -65,14 +65,24 @@
 
               &:is(:hover, :focus)
                 color: $c-accent
-    
-    .swiper-pagination-bullet
-      width: 14px
-      height: 14px
 
-    .swiper-pagination-bullet-active
-      background: $c-accent
-  
+    .team__slider__buttons
+      width: 100%
+
+      .swiper-button-prev, .swiper-button-next
+        position: static !important
+        transform: translate(0,0)
+        width: 48px !important
+        height: 48px !important
+        margin: 16px 0
+        border-radius: $radius-small
+        background-color: $c-accent
+      
+      .swiper-button-prev::after, .swiper-button-next::after
+        font-size: $fs-5
+        color: $c-primary
+        font-weight: $fw-800
+
   &__testimonials
 
     .testimonials__slider
