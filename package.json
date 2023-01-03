@@ -19,7 +19,7 @@
     "watch:html": "onchange 'src/**/*.html' -- npm run build:html",
     "serve": "browser-sync dist -w -b '/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'",
     "build": "run-s clean build:*",
-    "dev": "run-p serve watch:*"
+    "dev": "npm run build && run-p serve watch:*"
   },
   "keywords": [],
   "author": "",
