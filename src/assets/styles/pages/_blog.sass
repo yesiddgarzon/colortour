@@ -1,0 +1,41 @@
+@use "../abstract" as *
+
+.blog__page
+
+  main .flex
+    +until($tablet)
+      flex-direction: column
+
+  .blog__bio
+    text-align: center
+
+    +until($tablet)
+      border-top: $b-small $c-accent-light
+      padding-top: $p-big
+    
+    +desktop
+      width: 30%
+      padding: 0 $p-big
+      border-left: $b-small lighten($c-text, 76%)
+
+    .bio__img
+      border-radius: $radius-rounded
+      width: 80%
+      max-width: 256px
+      margin: 0 auto        
+    
+    .bio__social
+      font-size: $fs-3
+
+      a:is(:hover, :focus)
+        color: $c-accent
+
+  .blog__content
+    
+    .section__title 
+      text-align: left
+      margin: 0
+
+      span
+        color: $c-accent-light
+        text-transform: initial

@@ -30,10 +30,7 @@ a
 
 .section
   width: 100%
-  padding: $p-huge
-
-  +until($tablet)
-    padding: $p-huge $p-big
+  padding: $p-huge $p-medium
 
   &__title
     max-width: 516px
@@ -52,3 +49,16 @@ a
 
 .has-bg-alt
   background: $c-bg-alt
+
+.projects__page, .blog__page
+
+  .header
+    color: $c-text
+
+    .btn
+      color: $c-primary
+      border-color: $c-accent
+      background-color: $c-accent
+
+    .lang__item.is-active, .lang__item:is(:hover, :focus)
+      color: $c-accent !important

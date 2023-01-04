@@ -64,7 +64,7 @@ window.addEventListener("scroll", navLinkActive);
  */
 const teamSlider = new Swiper(".team__slider", {
   slidesPerView: 3,
-  spaceBetween: 32,
+  spaceBetween: 16,
   slidesPerGroup: 3,
   centerSlide: "true",
   fade: "true",
