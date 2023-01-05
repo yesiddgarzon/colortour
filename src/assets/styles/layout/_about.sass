@@ -18,16 +18,18 @@
   
   &__team
     .team__cards
-      .team__card
+      .team__card 
+        max-height: 512px
         border: $b-small lighten($c-text, 70%)      
         border-radius: $radius-huge
         background-color: $c-bg 
         cursor: pointer
         overflow: hidden
-
+          
         &:is(:hover, :focus)
           .card__content
             bottom: 0
+            background-color: $c-bg
 
         .card__avatar
           width: 100%
@@ -37,7 +39,7 @@
           left: 0
           bottom: -60px
           z-index: 10
-          background-color: $c-bg
+          background-color: rgba($c-bg, .8)
           width: 100%
           padding: $p-medium 0
           text-align: center
@@ -46,11 +48,10 @@
           .card__profile
 
             .card__position
-              color: lighten($c-text, 55%)
+              color: lighten($c-text, 20%)
 
             & > *
               margin: 0
-
 
           .card__social
             padding-top: $p-medium
