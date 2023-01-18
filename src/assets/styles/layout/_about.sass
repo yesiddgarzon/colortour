@@ -1,108 +1,100 @@
 @use "../abstract" as *
-  
-.about
-  margin-top: $p-big
 
-  &__about
-    
-    .about__img img
-      border-radius: $radius-huge
-    
-    +until($tablet)
-      flex-direction: column
-    
-    +desktop
-      .section__title
-        text-align: initial
-        margin: 0
+.about
+
+  &__main
+    &__content
+
+      img
+        border-radius: $radius-24
+
+      +until($tablet)
+        flex-direction: column
+      
+      +from($tablet)
+        flex-direction: row
   
   &__team
-    .team__cards
-      .team__card 
+
+    .team__container
+      overflow: hidden
+
+      .team__slider-buttons
+        padding-block: $s-16 0
+
+      .swiper-button-prev::after, .swiper-button-next::after
+        content: ''
+      
+      .swiper-button-prev, .swiper-button-next
+        position: static !important
+        width: 48px
+        height: 48px
+        margin: 0
+        font-size: $fs-2
+        border-radius: $radius-8
+        background-color: $c-accent
+        color: $c-text-light
+        border: none
+
+      .team__card .card
+        position: relative
         max-height: 512px
-        border: $b-small lighten($c-text, 70%)      
-        border-radius: $radius-huge
-        background-color: $c-bg 
-        cursor: pointer
+        border: $border-1 lighten($c-text-dark, 70%)
         overflow: hidden
-          
+        
         &:is(:hover, :focus)
           .card__content
             bottom: 0
-            background-color: $c-bg
-
-        .card__avatar
-          width: 100%
+            background-color: $c-bg-light
         
         .card__content
           position: absolute
           left: 0
-          bottom: -60px
-          z-index: 10
-          background-color: rgba($c-bg, .8)
+          bottom: -84px
+          z-index: $z-10
           width: 100%
-          padding: $p-medium 0
+          padding: $s-16 0
+          background-color: rgba($c-bg-light, .8)
           text-align: center
           transition: $transition
 
           .card__profile
 
-            .card__position
-              color: lighten($c-text, 20%)
-
             & > *
-              margin: 0
+              margin: 0 auto
 
-          .card__social
-            padding-top: $p-medium
+            .profile__position
+              color: lighten($c-text-dark, 20%)
             
-            .social__link i
-              font-size: $fs-3
-              color: lighten($c-text, 30%)
+            .profile__link:is(:hover, :focus)
+              color: $c-text-accent
 
-              &:is(:hover, :focus)
-                color: $c-accent
+        .card__social
+          padding-block: $s-16
 
-    .team__slider__buttons
-      width: 100%
+          .social__link i
+            font-size: $fs-1
+            color: lighten($c-text-dark, 30%)
 
-      .swiper-button-prev, .swiper-button-next
-        position: static !important
-        transform: translate(0,0)
-        width: 48px !important
-        height: 48px !important
-        margin: 16px 0
-        border-radius: $radius-small
-        background-color: $c-accent
+            &:is(:hover, :focus)
+              color: $c-text-accent
+  
+  &__testimonial
+
+    .sk-ww-google-reviews
+      background-color: transparent !important
+
+      .swiper-wrapper
+        left: 10px !important
+
+      .swiper-button-prev
+        left: 25px !important
       
+      .swiper-button-next
+        right: 25px !important
+
       .swiper-button-prev::after, .swiper-button-next::after
-        font-size: $fs-5
-        color: $c-primary
-        font-weight: $fw-800
+        content: ''
 
-  &__testimonials
 
-    .testimonials__slider
-      padding: $p-small
 
-      .testimonial__card
-        max-width: calc($max-width / 3)
-        width: 100%
-        background-color: $c-bg
-        border: $b-small lighten($c-text, 70%)
-        box-shadow: $bs-medium
-        border-radius: $radius-big
-        padding: $p-medium
-        text-align: center
-
-        .card__testimonial
-          color: lighten($c-text, 30%)
-          font-weight: $fw-500
-
-        .card__avatar
-          width: 128px
-          height: 128px
-          border-radius: $radius-rounded
-        
-        .card__name
-          margin: 0

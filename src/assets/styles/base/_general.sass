@@ -5,8 +5,8 @@ html
   scroll-behavior: smooth
 
 body
-  background-color: $c-bg
-  color: $c-text
+  background-color: $c-bg-light
+  color: $c-text-dark
   -ms-overflow-style: none
   scrollbar-width: none
 
@@ -24,18 +24,28 @@ a
   text-decoration: none
   color: inherit
 
+  &:is(:hover, :focus)
+    color: $c-text-accent
+
 .container
   max-width: $max-width
-  margin: 0 auto
+
+  +until($tablet)
+    margin-inline: $s-16
+  
+  +from($tablet)
+    margin: 0 auto
+    
 
 .section
-  width: 100%
-  padding: $p-huge $p-medium
+  padding-block: $s-96
 
   &__title
     max-width: 516px
-    text-align: center
-    margin: 0 auto
+
+    +from($tablet)
+      text-align: center
+      margin-inline: auto
     
     span
       color: $c-accent
@@ -49,16 +59,3 @@ a
 
 .has-bg-alt
   background: $c-bg-alt
-
-.projects__page, .blog__page
-
-  .header
-    color: $c-text
-
-    .btn
-      color: $c-primary
-      border-color: $c-accent
-      background-color: $c-accent
-
-    .lang__item.is-active, .lang__item:is(:hover, :focus)
-      color: $c-accent !important

@@ -1,38 +1,31 @@
 @use "../abstract" as *
-  
-.header
+
+header
   position: fixed
-  left: 0
   top: 0
   width: 100%
-  padding: $p-medium
-  background: transparent
+  background-color: transparent
+  padding-block: $s-16
+  z-index: $z-100
+  transition: $transition
   color: $c-text-light
-  z-index: 10
 
-  &.is-active
-    background: $c-bg
-    box-shadow: $bs-medium
-    color: $c-text
+  .flex
+    justify-content: space-between
+    align-items: center
 
-    .lang-switcher 
-      .lang__item.is-active,
-      .lang__item:is(:hover, :focus)
-        color: $c-accent
+  &.is-sticky
+    background-color: $c-bg-light
+    box-shadow: $shadow-1
+    color: $c-text-dark
   
-  .logo
-    font-weight: $fw-800
+  .header__logo
+    font-weight: $fw-700
     font-size: $fs-4
     background: -webkit-linear-gradient($c-accent,$c-primary)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
 
-  .lang-switcher
-    color: lighten($c-text, 40%)
-
-    .lang__item
-      color: lighten($c-text, 40%)
-      font-weight: $fw-600
-    
-      &.is-active, &:hover
-        color: $c-bg
+.projects__page
+  header *
+    color: $c-text-dark

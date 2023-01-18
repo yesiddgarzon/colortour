@@ -4,65 +4,51 @@
   background-color: $c-secondary-alt
 
   & *
-    color: $c-primary
+    color: $c-text-light
     transition: $transition
-  
-  &__resume
-    padding-bottom: calc($p-big * 2)
 
-    .social__links
+  &__content
+    padding-block: 0 $s-32
+
+    .footer__social
       gap: 8px
-      
-      .social__link
-        border: $b-small $c-primary
-        border-radius: $radius-rounded
-        font-size: $fs-4
-        padding: $p-small
+
+      a
         display: grid
         align-items: center
+        padding: $s-8
+        border: $border-1 $c-primary
+        border-radius: $radius-rounded
+        font-size: $fs-4
 
-        &:hover
-          border: $b-small $c-accent
-          color: $c-accent
+        &:is(:hover, :focus)
+          border: $border-1 $c-accent
+          color: $c-text-accent
 
           i
-            color: $c-accent
-  
-  &__quicklinks, &__contact
-    a
-      display: flex
-      align-items: center
-      justify-content: flex-start
-      padding: $p-xs 0
+            color: $c-text-accent
 
-      &:is(:hover, :focus)
-        color: $c-accent
-    
-    i
-      font-size: $fs-5
-      padding: $p-xs
-  
-  &__contact
-    .flex
-      gap: 0
-      justify-content: flex-start
-      align-items: center
+    .footer__quicklinks, .footer__contact
+      li
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+      i
+        font-size: $fs-5
+        padding: $s-4
   
   &__copy
     width: 100%
+    padding-block: $s-8
     text-align: center
     background-color: darken($c-secondary-alt, 5%)
-    padding: $p-xs
 
-    p
-      margin: 0 auto
-    
-    a:is(:hover, :focus)
-      color: $c-accent
-
-  +until($tablet)
-    .footer__content
+  +until($mobile)
+    .container.flex
       flex-direction: column
-
-      .col-70
-        width: 100%
+  
+  +from($mobile)
+    .container.flex
+      flex-direction: row
+  

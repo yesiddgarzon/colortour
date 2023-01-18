@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <title>Colortour Traveling</title>
-  
+
   <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +11,12 @@
   <meta name="keywords" content="">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link
@@ -30,587 +26,560 @@
 
   <!-- Swiper CSS -->
   <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  rel="stylesheet"
+  href="../assets/css/swiper-bundle.min.css"
   />
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../css/main.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/main.min.css">
 
 </head>
 <body>
-  <!-- header starts -->
+  <!-- Header -->
   <header class="header" data-header>
-    <div class="container flex justify-space-between align-center">
-
-      <a href="#" class="logo">Colortour</a>
-
+    <div class="container flex">
+      <a href="../" class="header__logo">
+        Colortour
+      </a>
       <nav class="main-nav" data-nav>
-
         <ul class="nav__menu flex flex--center" data-nav-menu>
-
           <li class="nav__item">
-            <a href="#home" class="nav__link" data-nav-link>Home</a>
+            <a href="#home" class="nav__link is-active" data-nav-link>Home</a>
           </li>
-
-          <li class="nav__item">
-            <a href="#about" class="nav__link" data-nav-link>About Us</a>
-          </li>
-
           <li class="nav__item">
             <a href="#tours" class="nav__link" data-nav-link>Tours</a>
           </li>
-
           <li class="nav__item">
-            <a href="#contact" class="nav__link" data-nav-link>Contact Us</a>
+            <a href="#about" class="nav__link" data-nav-link>About Us</a>
           </li>
-
           <li class="nav__item">
-            <a href="https://api.whatsapp.com/send/?phone=573045758866&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn btn--primary">book now</a>
+            <a href="#projects" class="nav__link" data-nav-link>Projects</a>
           </li>
-
+          <li class="nav__item">
+            <button class="btn btn--primary" onclick="wpMessage()">
+              book now
+            </button>
+          </li>
+        </ul>
       </nav>
-
       <div class="lang-switcher">
-        <a href="../" class="lang__item">ES</a> |
-        <a href="../en" class="lang__item is-active">EN</a>
+        <a href="../" class="lang__item">ES</a> | 
+        <a href="../en/" class="lang__item is-active">EN</a>
       </div>
-
-      <button class="nav__toggle" data-nav-toggle>
+      <div class="nav__toggle" data-nav-toggle>
         <i class="hamburger"></i>
-      </button>
-
+      </div>
     </div>
   </header>
-  <!-- header ends -->
 
-  <!-- main starts -->
+  <!-- Main Content -->
   <main class="main">
 
-    <!-- hero section starts -->
-    <section class="hero flex column flex--center" id="home">
-      
-      <img src="../img/hero.jpg" alt="Colortour hero" class="hero__bg">
-
-      <div class="hero__content flex column flex--center">
-
-        <h2 class="h1 hero__title">Colortour Traveling</h2>
-        <p class="hero__text">
-          Turismo urbano
-        </p>
-        <button class="btn btn--accent">book now</button>
-
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <img src="../assets/img/hero.jpg" alt="Colortour" class="hero__bg">
+      <div class="hero__content flex flex--center">
+        <h1 class="h1">Colortour Traveling</h1>
+        <p class="h6">Cultural and Creative Turism</p>
+        <button class="btn btn--accent" onclick="wpMessage()">book now</button>
       </div>
-
     </section>
-    <!-- hero section ends -->
 
-    <!-- about section starts -->
-    <section class="about" id="about">
-
-      <!-- about main -->
-      <div class="container section about__about flex">
-
-        <div class="col about__img self-center">
-          <img src="../img/about.jpg" alt="Colortour">
+    <!-- Tours Section -->
+    <section class="tours section has-bg-alt" id="tours">
+      <div class="container">
+        <div class="section__title">
+          <span>Nuestra oferta</span>
+          <h1>Disfruta Nuestros Tours</h1>
         </div>
-
-        <div class="col about__content">
-          <div class="section__title">
-            <span>about us</span>
-            <h1>Colortour Turismo Urbano</h1>
+        <div class="tours__cards flex" id="tour-cards">
+          <div class="tour__card card">
+            <img src="../assets/img/tour-comuna.jpg" alt="Tour Comuna 13" class="card__img">
+            <div class="card__content">
+              <div class="card__title">
+                <h3>Comuna 13</h3>
+                <span>Familiar</span>
+              </div>
+              <div class="card__description">
+                <p>¡Ven a la comuna 13  y diviértete en familia! Vive esta experiencia llena de amor y esperanza. Conoce cómo el arte transformó la historia de uno de los territorios más violentos de Medellín.</p>
+                <p>
+                  <b>Español:</b><br> $45.000 COP Por Persona ($10 USD)<br><br>
+                  <b>Inglés:</b><br> $55.000 COP Por Persona ($15 USD)
+                </p>
+              </div>
+            </div>
+            <div class="card__btns flex">
+              <button class="btn btn--outline" data-info-toggle>Conoce más</button>
+              <button class="btn btn--primary" onclick="wpMessage()">reserva ahora</button>
+            </div>
+            <div class="card__info">
+              <button class="card__info--close" data-info-close-btn>
+                <i class='bx bx-x'></i>
+              </button>
+              <div class="info__content">
+                <p>Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:</p>
+                <ul>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Transporte dentro de la comuna.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Helado artesanal de mango. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Acompañamiento de un guía habitante de la comuna.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Show de baile o freestyle.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Visita a lisaderos o toboganes.
+                  </li>
+                </ul>
+                <p><b>Horarios</b>: 9am / 2pm / 5:30pm</p>
+                <p>* Para vivir una mejor experiencia, te recomendamos hacer el tour en la mañana, ya que hay menos aforo.</p>
+              </div>
+              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
+            </div>
           </div>
-          <p>
-            Somos una operadora de turismo de la ciudad de Medellín, específicamente en la comuna 13, y que se encuentra ligada al arte y el emprendimiento comunitario.</p>
-          <p>
-            Hemos fusionado el arte, la producción audiovisual, la gastronomía, el emprendimiento y principalmente el turismo comunitario con el fin descubrir y reinterpretar el territorio. Nuestro propósito es brindar herramientas desde lo artístico y cultural, para aportar a la transformación social, permitiendo que las comunidades a las cuales nos acercamos puedan conocer otras formas de habitar sus espacios.
-          </p>
+          <div class="tour__card card">
+            <img src="../assets/img/tour-comuna.jpg" alt="Tour Comuna 13" class="card__img">
+            <div class="card__content">
+              <div class="card__title">
+                <h3>Comuna 13</h3>
+                <span>Pa las neas</span>
+              </div>
+              <div class="card__description">
+                <p>¡Si lo que buscas es diversión con tus amigos, esta experiencia te va a encantar! Conoce las mejores cervecerías y miradores de la comuna 13, un tour recomendado para disfrutar de buena compañía y una buena cerveza.</p>
+                <p>
+                  <b>Español:</b><br> $75.000 COP Por Persona ($17 USD)<br><br>
+                  <b>Inglés:</b><br> $85.000 COP Por Persona ($22 USD)
+                </p>
+              </div>
+            </div>
+            <div class="card__btns flex">
+              <button class="btn btn--outline" data-info-toggle>Conoce más</button>
+              <button class="btn btn--primary" onclick="wpMessage()">reserva ahora</button>
+            </div>
+            <div class="card__info">
+              <button class="card__info--close" data-info-close-btn>
+                <i class='bx bx-x'></i>
+              </button>
+              <div class="info__content">
+                <p>Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:</p>
+                <ul>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Transporte dentro de la comuna.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Brindis de bienvenida. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    1 Cerveza artesanal. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    5 shots de licor.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Degustación de comida callejera. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Acompañamiento de un guía experto en diversión. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Show de baile o freestyle.
+                  </li>
+                </ul>
+                <p><b>Horarios</b>: 9am / 2pm / 5:30pm</p>
+                <p>* Para vivir una mejor experiencia, te recomendamos hacer el tour en la tarde para disfrutar el atardecer.</p>
+              </div>
+              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
+            </div>
+          </div>
+          <div class="tour__card card">
+            <img src="../assets/img/tour-comuna.jpg" alt="Tour Comuna 13" class="card__img">
+            <div class="card__content">
+              <div class="card__title">
+                <h3>Comuna 13</h3>
+                <span>Académico</span>
+              </div>
+              <div class="card__description">
+                <p>Vive esta increíble experiencia familiar, llena de amor, esperanza y color, un tour para interactuar con el arte y la historia del territorio.</p>
+              </div>
+            </div>
+            <div class="card__btns flex">
+              <button class="btn btn--outline" data-info-toggle>Conoce más</button>
+              <button class="btn btn--primary" onclick="wpMessage()">reserva ahora</button>
+            </div>
+            <div class="card__info">
+              <button class="card__info--close" data-info-close-btn>
+                <i class='bx bx-x'></i>
+              </button>
+              <div class="info__content">
+                <p>Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:</p>
+                <ul>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Transporte dentro de la comuna.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Helado artesanal. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Acompañamiento de un guía habitante de la comuna. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Show de baile o freestyle.
+                  </li>
+                </ul>
+                <p><b>Horarios</b>: 9am / 2pm / 5:30pm</p>
+                <p>* Para vivir una mejor experiencia, te recomendamos hacer el tour en la mañana, ya que hay menos aforo.</p>
+              </div>
+              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
+            </div>
+          </div>
+          <div class="tour__card card">
+            <img src="../assets/img/tour-centro.jpeg" alt="Tour Comuna 13" class="card__img">
+            <div class="card__content">
+              <div class="card__title">
+                <h3>Centro Histórico</h3>
+              </div>
+              <div class="card__description">
+                <p>Reivindica el valor del centro histórico y arquitectónico del centro de la ciudad de Medellín y disfruta de lugares icónicos llenos de historia, música y gastronomía. </p>
+                <p>
+                  <b>Español:</b><br> 
+                  $67.000 COP Por Persona ($17 USD)<br>
+                  $97.000 COP Por Persona ($25 USD)*<br><br>
+                  <b>Inglés:</b><br> 
+                  $77.000 COP Por Persona ($20 USD)<br>
+                  $107.000 COP Por Persona ($28 USD)*</p>
+                </p>
+                <p class="is-small">
+                  * incluye almuerzo
+                </p>
+              </div>
+            </div>
+            <div class="card__btns flex">
+              <button class="btn btn--outline" data-info-toggle>Conoce más</button>
+              <button class="btn btn--primary" onclick="wpMessage()">reserva ahora</button>
+            </div>
+            <div class="card__info">
+              <button class="card__info--close" data-info-close-btn>
+                <i class='bx bx-x'></i>
+              </button>
+              <div class="info__content">
+                <p>Tour de 3 horas por el centro histórico de Medellín, que incluye:</p>
+                <ul>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Botella de agua de bienvenida.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Arepa de chocolo o queso. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Souvenir.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Café, carajillo o shot de aguardiente. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Póliza de asistencia médica.
+                  </li>
+                </ul>
+                <p><b>Horarios</b>: 9am / 2pm</p>
+              </div>
+              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
+            </div>
+          </div>
         </div>
-
+        <button class="btn btn--outline cards__load-more" id="load-more">Mostrar mas</button>
       </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <!-- about main -->
+      <article class="about__main section">
+        <div class="container">
+          <div class="section__title">
+            <span>Acerca de nosotros</span>
+            <h1>Colortour Turismo Creativo</h1>
+          </div>
+          <div class="about__main__content flex">
+            <div class="about__main__img col">
+              <img src="../assets/img/about.JPG" alt="Colortour Equipo">
+            </div>
+            <div class="about__main__info col">
+              <p>
+                Somos un operadora de turismo cultural y creativo ubicada en la comuna 13 de la ciudad de Medellín. Ofrecemos experiencias que narran la transformación de los territorios por medio del arte y el color, haciendo una invitación a vivir. 
+              </p>
+              <p>
+                Nuestra experiencia está influenciada por la cultura Hip-Hop, en todas sus expresiones: baile, música y graffiti; éstas se han convertido en alternativas para habitar el territorio y reescribir su historia.
+              </p>
+              <p>
+                En seis años de operación hemos logrado llegar a diferentes ciudades y países, compartiendo nuestra experiencia y asesorando la construcción de procesos similares al nuestro. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
 
       <!-- about team -->
-      <div class="about__team has-bg-alt">
-
-        <div class="container section">
-
+      <article class="about__team section has-bg-alt">
+        <div class="container">
           <div class="section__title">
-            <span>Our team</span>
+            <span>nuestro equipo</span>
             <h1>Expertos en contar historias</h1>
           </div>
+          <div class="team__container swiper">
+            <div class="swiper-wrapper">
 
-          <div class="swiper team__slider">
-      
-            <div class="swiper-wrapper team__cards">
-
-              <div class="swiper-slide team__card">
-
-                <img src="../img/avatar-female.png" alt="Manu" class="card__avatar">
-
-                <div class="card__content">
-
-                  <div class="card__profile">
-                    <h4 class="card__aka">Manu</h4>
-                    <p class="card__name">Manuela Bustamante</p>
-                    <p class="card__position">Founder</p>
-                  </div>
-
-                  <div class="card__social">
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-instagram'></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-pinterest-alt' ></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-tiktok' ></i>
-                    </a>
-                  </div>
-
+              <div class="team__card swiper-slide">
+                <div class="card">
+                  <img src="../assets/img/team-chavo.JPG" alt="Chavo" class="card__img">
+                  <div class="card__content">
+                    <div class="card__profile">
+                      <h4 class="profile__aka">Chavo</h4>
+                      <p class="profile__position">Fundador</p>
+                      <a href="../blog/chavo.html" class="profile__link">Lee mi blog</a>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://www.instagram.com/chavocensurafotos/" target="_blank" rel="noopener noreferrer" class="social__link">
+                        <i class='bx bxl-instagram'></i>
+                      </a>
+                    </div>
+                  </div> 
                 </div>
               </div>
 
-              <div class="swiper-slide team__card">
-
-                <img src="../img/avatar-male-1.png" alt="Chavo" class="card__avatar">
-
-                <div class="card__content">
-
-                  <div class="card__profile">
-                    <h4 class="card__aka">Chavo</h4>
-                    <p class="card__name">Javier Esteban Agudelo Vallejo</p>
-                    <p class="card__position">Founder</p>
-                  </div>
-
-                  <div class="card__social">
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-instagram'></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-pinterest-alt' ></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-tiktok' ></i>
-                    </a>
-                  </div>
-
+              <div class="team__card swiper-slide">
+                <div class="card">
+                  <img src="../assets/img/team-manu.JPG" alt="Manu" class="card__img">
+                  <div class="card__content">
+                    <div class="card__profile">
+                      <h4 class="profile__aka">Manu</h4>
+                      <p class="profile__position">Fundadora</p>
+                      <a href="../blog/manu.html" class="profile__link">Lee mi blog</a>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://www.instagram.com/____mbg____/" target="_blank" rel="noopener noreferrer" class="social__link">
+                        <i class='bx bxl-instagram'></i>
+                      </a>
+                    </div>
+                  </div> 
                 </div>
               </div>
 
-              <div class="swiper-slide team__card">
-
-                <img src="../img/avatar-male-2.png" alt="Chavo" class="card__avatar">
-
-                <div class="card__content">
-
-                  <div class="card__profile">
-                    <h4 class="card__aka">Kbala</h4>
-                    <p class="card__name">Dayro Andres Hidalgo Garcia</p>
-                    <p class="card__position">Founder</p>
-                  </div>
-
-                  <div class="card__social">
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-instagram'></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-pinterest-alt' ></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-tiktok' ></i>
-                    </a>
-                  </div>
-
+              <div class="team__card swiper-slide">
+                <div class="card">
+                  <img src="../assets/img/team-kbala.JPG" alt="Kbala" class="card__img">
+                  <div class="card__content">
+                    <div class="card__profile">
+                      <h4 class="profile__aka">Kbala</h4>
+                      <p class="profile__position">Fundador</p>
+                      <a href="../blog/kbala.html" class="profile__link">Lee mi blog</a>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://www.instagram.com/kbalac13/" target="_blank" rel="noopener noreferrer" class="social__link">
+                        <i class='bx bxl-instagram'></i>
+                      </a>
+                    </div>
+                  </div> 
                 </div>
               </div>
 
-              <div class="swiper-slide team__card">
+              <div class="team__card swiper-slide">
+                <div class="card">
+                  <img src="../assets/img/team-tati.JPG" alt="Tati" class="card__img">
+                  <div class="card__content">
+                    <div class="card__profile">
+                      <h4 class="profile__aka">Tati</h4>
+                      <p class="profile__position">Guía</p>
+                      <a href="../blog/tati.html" class="profile__link">Lee mi blog</a>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://www.instagram.com/tatixagu/" target="_blank" rel="noopener noreferrer" class="social__link">
+                        <i class='bx bxl-instagram'></i>
+                      </a>
+                    </div>
+                  </div> 
+                </div>
+              </div>
 
-                <img src="../img/avatar-female.png" alt="Tati" class="card__avatar">
 
-                <div class="card__content">
+              <div class="team__card swiper-slide">
+                <div class="card">
+                  <img src="../assets/img/team-marra.JPG" alt="Marra" class="card__img">
+                  <div class="card__content">
+                    <div class="card__profile">
+                      <h4 class="profile__aka">Marra</h4>
+                      <p class="profile__position">Guía</p>
+                      <a href="../blog/marra.html" class="profile__link">Lee mi blog</a>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://www.instagram.com/stivenmonsalve88/" target="_blank" rel="noopener noreferrer" class="social__link">
+                        <i class='bx bxl-instagram'></i>
+                      </a>
+                    </div>
+                  </div> 
+                </div>
+              </div>
 
-                  <div class="card__profile">
-                    <h4 class="card__aka">Tati</h4>
-                    <p class="card__name">Tatiana Agudelo Vallejo</p>
-                    <p class="card__position">Tour Guide</p>
-                  </div>
-
-                  <div class="card__social">
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-instagram'></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-pinterest-alt' ></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-                      <i class='bx bxl-tiktok' ></i>
-                    </a>
-                  </div>
-
+              <div class="team__card swiper-slide">
+                <div class="card">
+                  <img src="../assets/img/team-yeso.JPG" alt="Yeso" class="card__img">
+                  <div class="card__content">
+                    <div class="card__profile">
+                      <h4 class="profile__aka">Yeso</h4>
+                      <p class="profile__position">Guía</p>
+                      <a href="../blog/yeso.html" class="profile__link">Lee mi blog</a>
+                    </div>
+                    <div class="card__social">
+                      <a href="https://www.instagram.com/yeso.sdc/" target="_blank" rel="noopener noreferrer" class="social__link">
+                        <i class='bx bxl-instagram'></i>
+                      </a>
+                    </div>
+                  </div> 
                 </div>
               </div>
 
             </div>
 
-            <div class="swiper-pagination"></div>
-
+            <div class="team__slider-buttons flex flex--center">
+              <div class="swiper-button-prev">
+                <i class='bx bx-chevron-left'></i>
+              </div>
+              <div class="swiper-button-next">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </div>
           </div>
-
         </div>
-
-      </div>
+      </article>
 
       <!-- about testimonials -->
-      <div class="about__testimonials">
-
-        <div class="section">
-
-          <div class="container section__title">
-            <span>Testimonials</span>
-            <h1>Dicen de nosotros</h1>
-          </div>
-
-          <div class="swiper testimonials__slider">
-
-            <div class="swiper-wrapper testimonial__cards">
-
-              <div class="swiper-slide flex flex--center">
-                
-                <div class="testimonial__card">
-
-                  <p class="card__testimonial">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos tempore perspiciatis vel similique maiores tempora numquam illo accusantium omnis, blanditiis quia quo saepe voluptate, hic modi necessitatibus cum, eveniet nesciunt.
-                  </p>
-  
-                  <img src="../img/avatar-male-1.png" alt="avatar" class="card__avatar">
-  
-                  <h5 class="card__name">John Doe</h5>
-                </div>
-
-              </div>
-
-            </div>  
-            
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-
-          </div>
-
+      <article class="about__testimonial section">
+        <div class="container">
+          <div class='sk-ww-google-reviews' data-embed-id='108439'></div>
         </div>
-
-      </div>
-
+      </article>
     </section>
-    <!-- about section ends -->
 
-    <!-- tours section starts -->
-    <section class="tours has-bg-alt" id="tours">
-
-      <div class="container section">
-
-        <div class="section__title">
-          <span>Tours we offer</span>
-          <h1>Toures para todos</h1>
-        </div>
-
-        <div class="tours__cards flex wrap align-center justify-space-between" id="tour-cards">
-
-          <div class="tour__card">
-            <img src="../img/tour-comuna.jpg" alt="comuna13" class="card__img">
-            
-            <div class="card__content">
-
-              <h3 class="card__title">Comuna 13</h3>
-              <p class="card__description">Tour de transformación</p>
-              <div class="card__buttons flex flex--center">
-                <button class="btn btn--outline" data-info-toggle>Conoce mas</button>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn--primary">reserva ahora</a>
-              </div>
-              
-            </div>
-
-            <div class="card__info">
-              <button class="card__info--close" data-info-close-btn>
-                <i class='bx bx-x'></i>
-              </button>
-              <div class="info__content">
-                <p>Tour por las escalas electricas.</p>
-                <p><b>Costos:</b><br>
-                <b>Español:</b> $35.000 COP Por Persona ($10 USD)<br>
-                <b>Inglés:</b> $45.000 COP Por Persona ($15 USD)</p>
-              </div>
-              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
-            </div>
-            
-          </div>
-
-          <div class="tour__card">
-            <img src="../img/tour-centro.jpeg" alt="centro" class="card__img">
-            
-            <div class="card__content">
-
-              <h3 class="card__title">Centro Histórico</h3>
-
-              <p class="card__description">Conoce el comercio local.</p>
-
-              <div class="card__buttons flex flex--center">
-                <button class="btn btn--outline" data-info-toggle>Conoce mas</button>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn--primary">reserva ahora</a>
-              </div>
-              
-            </div>
-
-            <div class="card__info">
-              <button class="card__info--close" data-info-close-btn>
-                <i class='bx bx-x'></i>
-              </button>
-              <div class="info__content">
-                <p>Tour por las escalas electricas.</p>
-                <p><b>Costos:</b><br>
-                <b>Español:</b> $70.000 COP Por Persona ($10 USD)<br>
-                <b>Inglés:</b> $45.000 COP Por Persona ($15 USD)</p>
-              </div>
-              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
-            </div>
-            
-          </div>
-
-          <div class="tour__card">
-            <img src="../img/tour-guatape.jpg" alt="guatape" class="card__img">
-            
-            <div class="card__content">
-
-              <h3 class="card__title">Guatape</h3>
-              <p class="card__description">Visita la piedra del Peñol.</p>
-              <div class="card__buttons flex flex--center">
-                <button class="btn btn--outline" data-info-toggle>Conoce mas</button>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-info-book-btn>reserva ahora</a>
-              </div>
-              
-            </div>
-
-            <div class="card__info">
-              <button class="card__info--close" data-info-close-btn>
-                <i class='bx bx-x'></i>
-              </button>
-              <div class="info__content">
-                <p>Tour por las escalas electricas.</p>
-                <p><b>Costos:</b><br>
-                <b>Español:</b> $35.000 COP Por Persona ($10 USD)<br>
-                <b>Inglés:</b> $45.000 COP Por Persona ($15 USD)</p>
-              </div>
-              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
-            </div>
-            
-          </div>
-
-          <div class="tour__card">
-            <img src="../img/tour-comuna.jpg" alt="comuna13" class="card__img">
-            
-            <div class="card__content">
-
-              <h3 class="card__title">Comuna 13</h3>
-              <p class="card__description">Tour de transformación</p>
-              <div class="card__buttons flex flex--center">
-                <button class="btn btn--outline" data-info-toggle>Conoce mas</button>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn--primary">reserva ahora</a>
-              </div>
-              
-            </div>
-
-            <div class="card__info">
-              <button class="card__info--close" data-info-close-btn>
-                <i class='bx bx-x'></i>
-              </button>
-              <div class="info__content">
-                <p>Tour por las escalas electricas.</p>
-                <p><b>Costos:</b><br>
-                <b>Español:</b> $35.000 COP Por Persona ($10 USD)<br>
-                <b>Inglés:</b> $45.000 COP Por Persona ($15 USD)</p>
-              </div>
-              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
-            </div>
-            
-          </div>
-
-          <div class="tour__card">
-            <img src="../img/tour-centro.jpeg" alt="centro" class="card__img">
-            
-            <div class="card__content">
-
-              <h3 class="card__title">Centro Histórico</h3>
-
-              <p class="card__description">Conoce el comercio local.</p>
-
-              <div class="card__buttons flex flex--center">
-                <button class="btn btn--outline" data-info-toggle>Conoce mas</button>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn--primary">reserva ahora</a>
-              </div>
-              
-            </div>
-
-            <div class="card__info">
-              <button class="card__info--close" data-info-close-btn>
-                <i class='bx bx-x'></i>
-              </button>
-              <div class="info__content">
-                <p>Tour por las escalas electricas.</p>
-                <p><b>Costos:</b><br>
-                <b>Español:</b> $70.000 COP Por Persona ($10 USD)<br>
-                <b>Inglés:</b> $45.000 COP Por Persona ($15 USD)</p>
-              </div>
-              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
-            </div>
-            
-          </div>
-
-          <div class="tour__card">
-            <img src="../img/tour-guatape.jpg" alt="guatape" class="card__img">
-            
-            <div class="card__content">
-
-              <h3 class="card__title">Guatape</h3>
-              <p class="card__description">Visita la piedra del Peñol.</p>
-              <div class="card__buttons flex flex--center">
-                <button class="btn btn--outline" data-info-toggle>Conoce mas</button>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-info-book-btn>reserva ahora</a>
-              </div>
-              
-            </div>
-
-            <div class="card__info">
-              <button class="card__info--close" data-info-close-btn>
-                <i class='bx bx-x'></i>
-              </button>
-              <div class="info__content">
-                <p>Tour por las escalas electricas.</p>
-                <p><b>Costos:</b><br>
-                <b>Español:</b> $35.000 COP Por Persona ($10 USD)<br>
-                <b>Inglés:</b> $45.000 COP Por Persona ($15 USD)</p>
-              </div>
-              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
-            </div>
-            
-          </div>
-
-          <button class="btn btn--outline cards__load-more" id="load-more">Mostrar mas</button>
-
-        </div>
-
-      </div>
-
-    </section>
-    <!-- tours section ends -->
-
-    <!-- contact section starts -->
-    <section class="contact section" id="contact">
-
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
       <div class="container flex">
-
-        <div class="contact__cta__content col-70">
-
+        <div class="projects__content">
           <div class="section__title">
-            <span>call to action</span>
-            <h2 class="h1">Estas listo para un tour inolvidable</h2>
+            <span>trabajamos para la sociedad</span>
+            <h1>Proyectos con compromiso social</h1>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore obcaecati optio, eligendi in ut nostrum</p>
-
         </div>
-
-        <div class="contact__cta__btn self-center">
-          <a href="https://api.whatsapp.com/send/?phone=573045758866&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn btn--outline--primary">contactanos</a>
+        <div class="projects__btn">
+          <a href="../projects.html" class="btn btn--outline--light">Conoce más</a>
         </div>
-
       </div>
     </section>
-    <!-- contact section ends -->
+
 
   </main>
-  <!-- main ends -->
-  
-  <!-- footer starts -->
+
+  <!-- Footer -->
   <footer class="footer">
-
-    <div class="container">
-
-      <div class="footer__content section flex justify-space-between">
-
+    <div class="footer__content">
+      <div class="container flex">
         <div class="footer__resume col">
-
-          <h5>Colortour</h5>
-
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-          <div class="social__links flex">
-            
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-              <i class='bx bxl-facebook' ></i>
-            </a>
-            
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
+          <h4>Colortour</h4>
+          <p>Turismo Cultural y Creativo</p>
+          <div class="footer__social flex">
+            <a href="https://www.instagram.com/colortourtraveling/" target="_blank" rel="noopener noreferrer">
               <i class='bx bxl-instagram'></i>
             </a>
-
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-              <i class='bx bxl-pinterest-alt' ></i>
+            <a href="https://www.facebook.com/colortourtraveling" target="_blank" rel="noopener noreferrer">
+              <i class='bx bxl-facebook'></i>
             </a>
-
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="social__link">
-              <i class='bx bxl-twitter' ></i>
-            </a>
-
           </div>
-
         </div>
-
         <div class="footer__quicklinks col">
-
-          <h5>Acceso Rápido</h5>
-          <a href="#home" class="quicklink"><i class='bx bx-chevron-right' ></i>Home</a>
-          <a href="#about" class="quicklink"><i class='bx bx-chevron-right' ></i>About Us</a>
-          <a href="#tours" class="quicklink"><i class='bx bx-chevron-right' ></i>Tours</a>
-          <a href="#contact" class="quicklink"><i class='bx bx-chevron-right' ></i>Contact Us</a>
-
-
+          <h4>Acceso Rápido</h4>
+          <ul>
+            <li>
+              <i class='bx bx-chevron-right'></i>
+              <a href="#home">Inicio</a>
+            </li>
+            <li>
+              <i class='bx bx-chevron-right'></i>
+              <a href="#tours">Tours</a>
+            </li>
+            <li>
+              <i class='bx bx-chevron-right'></i>
+              <a href="#about">Nosotros</a>
+            </li>
+            <li>
+              <i class='bx bx-chevron-right'></i>
+              <a href="../projects.html">Proyectos</a>
+            </li>
+          </ul>
         </div>
-
         <div class="footer__contact col">
-
-          <h5>Contacto</h5> 
-          <a href="tel:+573045758866">
-            <i class='bx bx-phone' ></i> +573045758866
-          </a>
-          <a href="mailto:info@colortour.com">
-            <i class='bx bx-envelope' ></i> info@colortour.com
-          </a>
-          <p>
-            <i class='bx bx-location-plus' ></i>
-            Medellín, Colombia
-          </p>
-
+          <h4>Contáctanos</h4>
+          <ul>
+            <li>
+              <i class='bx bx-phone' ></i>
+              <a href="tel:+573045758866">+573045758866</a>
+            </li>
+            <li>
+              <i class='bx bx-envelope' ></i>
+              <a href="mailto:info@colortour.com">info@colortour.com</a>
+            </li>
+            <li>
+              <i class='bx bx-location-plus' ></i>
+              <a href="https://goo.gl/maps/UJgM8r7uzD91VFoT7"> 
+                Cra. 109 #38a3, Veinte De Julio, MED
+              </a>
+            </li>
+          </ul>
         </div>
-
       </div>
-
-      <div class="footer__copy">
-
-        <p>
-          &copy; 2023 <b><a href="#">Colortour</a></b>. All Rights Reserved
-        </p>
-
-      </div>
-
     </div>
-
+    <div class="footer__copy">
+      <div class="container">
+        &copy; 2023 <b><a href="#">Colortour</a></b>. Derechos Reservados
+      </div>
+    </div>
   </footer>
-  <!-- footer ends -->
 
-  <!-- swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Whatsapp Floating Button -->
+  <button class="wp__btn flex flex--center" onclick="wpMessage()">
+    <i class='bx bxl-whatsapp'></i>
+  </button>
 
-  <!-- custom js -->
-  <script src="../js/main.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="../assets/js/swiper-bundle.min.js"></script>
 
+  <!-- Google reviews JS -->
+  <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+  
+  <!-- Custom Script -->
+  <script src="../assets/js/main.min.js"></script>
+  
 </body>
 </html>
