@@ -56,7 +56,7 @@
             <a href="../#projects" class="nav__link" data-nav-link>Proyectos</a>
           </li>
           <li class="nav__item">
-            <button class="btn btn--primary" onclick="wpMessage()">
+            <button class="btn btn--primary--light" onclick="wpMessage()">
               reserva ahora
             </button>
           </li>
@@ -93,62 +93,11 @@
           <h1>Disfruta Nuestros Tours</h1>
         </div>
         <div class="tours__cards flex" id="tour-cards">
-          <div class="tour__card card">
+
+          <div class="tour__card card card--accent">
             <img src="../assets/img/tour-comuna.jpg" alt="Tour Comuna 13" class="card__img">
             <div class="card__content">
-              <div class="card__title">
-                <h3>Comuna 13</h3>
-                <span>Familiar</span>
-              </div>
-              <div class="card__description">
-                <p>¡Ven a la comuna 13  y diviértete en familia! Vive esta experiencia llena de amor y esperanza. Conoce cómo el arte transformó la historia de uno de los territorios más violentos de Medellín.</p>
-                <p>
-                  <b>Español:</b><br> $45.000 COP Por Persona ($10 USD)<br><br>
-                  <b>Inglés:</b><br> $55.000 COP Por Persona ($15 USD)
-                </p>
-              </div>
-            </div>
-            <div class="card__btns flex">
-              <button class="btn btn--outline" data-info-toggle>Conoce más</button>
-              <button class="btn btn--primary" onclick="wpMessage()">reserva ahora</button>
-            </div>
-            <div class="card__info">
-              <button class="card__info--close" data-info-close-btn>
-                <i class='bx bx-x'></i>
-              </button>
-              <div class="info__content">
-                <p>Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:</p>
-                <ul>
-                  <li>
-                    <i class='bx bx-check'></i> 
-                    Transporte dentro de la comuna.
-                  </li>
-                  <li>
-                    <i class='bx bx-check'></i> 
-                    Helado artesanal de mango. 
-                  </li>
-                  <li>
-                    <i class='bx bx-check'></i> 
-                    Acompañamiento de un guía habitante de la comuna.
-                  </li>
-                  <li>
-                    <i class='bx bx-check'></i> 
-                    Show de baile o freestyle.
-                  </li>
-                  <li>
-                    <i class='bx bx-check'></i> 
-                    Visita a lisaderos o toboganes.
-                  </li>
-                </ul>
-                <p><b>Horarios</b>: 9am / 2pm / 5:30pm</p>
-                <p>* Para vivir una mejor experiencia, te recomendamos hacer el tour en la mañana, ya que hay menos aforo.</p>
-              </div>
-              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
-            </div>
-          </div>
-          <div class="tour__card card">
-            <img src="../assets/img/tour-comuna.jpg" alt="Tour Comuna 13" class="card__img">
-            <div class="card__content">
+              <i class='bx bxs-star card__star'></i>
               <div class="card__title">
                 <h3>Comuna 13</h3>
                 <span>Pa las neas</span>
@@ -207,6 +156,61 @@
               <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
             </div>
           </div>
+
+          <div class="tour__card card">
+            <img src="../assets/img/tour-comuna.jpg" alt="Tour Comuna 13" class="card__img">
+            <div class="card__content">
+              <div class="card__title">
+                <h3>Comuna 13</h3>
+                <span>Familiar</span>
+              </div>
+              <div class="card__description">
+                <p>¡Ven a la comuna 13  y diviértete en familia! Vive esta experiencia llena de amor y esperanza. Conoce cómo el arte transformó la historia de uno de los territorios más violentos de Medellín.</p>
+                <p>
+                  <b>Español:</b><br> $45.000 COP Por Persona ($10 USD)<br><br>
+                  <b>Inglés:</b><br> $55.000 COP Por Persona ($15 USD)
+                </p>
+              </div>
+            </div>
+            <div class="card__btns flex">
+              <button class="btn btn--outline" data-info-toggle>Conoce más</button>
+              <button class="btn btn--primary" onclick="wpMessage()">reserva ahora</button>
+            </div>
+            <div class="card__info">
+              <button class="card__info--close" data-info-close-btn>
+                <i class='bx bx-x'></i>
+              </button>
+              <div class="info__content">
+                <p>Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:</p>
+                <ul>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Transporte dentro de la comuna.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Helado artesanal de mango. 
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Acompañamiento de un guía habitante de la comuna.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Show de baile o freestyle.
+                  </li>
+                  <li>
+                    <i class='bx bx-check'></i> 
+                    Visita a lisaderos o toboganes.
+                  </li>
+                </ul>
+                <p><b>Horarios</b>: 9am / 2pm / 5:30pm</p>
+                <p>* Para vivir una mejor experiencia, te recomendamos hacer el tour en la mañana, ya que hay menos aforo.</p>
+              </div>
+              <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
+            </div>
+          </div>
+
           <div class="tour__card card">
             <img src="../assets/img/tour-comuna.jpg" alt="Tour Comuna 13" class="card__img">
             <div class="card__content">
@@ -252,6 +256,7 @@
               <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
             </div>
           </div>
+
           <div class="tour__card card">
             <img src="../assets/img/tour-centro.jpeg" alt="Tour Comuna 13" class="card__img">
             <div class="card__content">
@@ -310,6 +315,7 @@
               <button class="info__btn btn btn--primary" data-info-book-btn>Reserva ahora</button>
             </div>
           </div>
+
         </div>
         <button class="btn btn--outline cards__load-more" id="load-more">Mostrar mas</button>
       </div>

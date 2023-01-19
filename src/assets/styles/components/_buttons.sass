@@ -20,10 +20,20 @@
     &:is(:hover, :focus)
       background-color: transparent
       color: $c-text-dark
+  
+  &--primary--light
+    color: $c-text-light
+    border-color: $c-secondary
+    background-color: $c-secondary
+
+    &:is(:hover, :focus)
+      background-color: transparent
+      color: $c-text-light
+      border-color: $c-primary
 
   &--accent
     color: $c-text-light
-    border-color: $c-accent
+    border-color: $c-accent !important
     background-color: $c-bg-accent
 
     &:is(:hover, :focus)

@@ -15,7 +15,7 @@ if (navToggle) {
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('is-open');
     navToggle.classList.toggle('is-open');
-    navBtn.classList.toggle('btn--accent');
+    navBtn.classList.add('btn--accent');
   });
 }
 
