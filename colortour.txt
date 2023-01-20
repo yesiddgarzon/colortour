@@ -1,0 +1,191 @@
+*** header ***
+
+Colortour
+
+Inicio
+Tours
+Nosotros
+Proyectos
+Reserva ahora button
+
+ES | EN lang-switcher
+
+*** hero section ***
+
+Colortour Traveling
+Turismo Cultural y Creativo
+
+reserva ahora button
+
+*** tours section ***
+
+nuestra oferta
+Disfruta Nuestros Tours
+
+
+-----------
+
+Comuna 13
+Familiar
+
+¡Ven a la comuna 13  y diviértete en familia! Vive esta experiencia llena de amor y esperanza. Conoce cómo el arte transformó la historia de uno de los territorios más violentos de Medellín.
+
+Español: $45.000 (12 USD)
+Inglés: $55.000 (15 USD)
+
+Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:
+Transporte dentro de la comuna.
+Helado artesanal de mango. 
+Acompañamiento de un guía habitante de la comuna.
+Show de baile o freestyle.
+Visita a lisaderos o toboganes 
+
+Horarios: 9am / 2pm / 5:30pm
+
+*  Para vivir una mejor experiencia, te recomendamos hacer el tour en la mañana, ya que hay menos aforo.
+
+-----------
+
+Comuna 13 
+‘Pa las neas’
+
+¡Si lo que buscas es diversión con tus amigos, esta experiencia te va a encantar! Conoce las mejores cervecerías y miradores de la comuna 13, un tour recomendado para disfrutar de buena compañía y una buena cerveza.
+
+Español: $75.000 (19 USD)
+Inglés: $85.000 (22 USD)
+
+Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:
+Transporte dentro de la comuna.
+Brindis de bienvenida.
+1 Cerveza artesanal.  
+5 shots de licor.
+Degustación de comida callejera. 
+Acompañamiento de un guía experto en diversión.
+Show de baile o freestyle.
+
+Horarios: 9am / 2pm / 5:30pm
+
+* Recomendamos hacer el tour en la tarde para disfrutar del atardecer.
+
+-----------
+
+Comuna 13 
+Académico
+
+Vive esta increíble experiencia llena de transformación, esperanza y amor. Un tour para disfrutar y entender porque el arte salvó tantas vidas en esta zona de la ciudad.
+
+Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:
+Transporte interno en la comuna.
+Helado artesanal.
+Acompañamiento de un guía habitante de la comuna.
+Show de baile o freestyle.
+
+Horarios: 9am / 2pm / 5:30pm
+
+*  Para vivir una mejor experiencia, te recomendamos hacer el tour en la mañana, ya que hay menos aforo.
+
+-----------
+
+Centro Histórico 
+
+Reivindica el valor del centro histórico y arquitectónico del centro de la ciudad de Medellín y disfruta de lugares icónicos llenos de historia, música y gastronomía. 
+
+Español: $67.000 (17 USD) / $97.000 (25 USD)*
+Inglés: $77.000 (20 USD) / $107.000 (28 USD)*
+
+* Incluye almuerzo
+
+Tour de 3 horas por el centro histórico de Medellín, que incluye:
+Botella de agua de bienvenida. 
+Arepa de choclo o queso.
+Souvenir
+Café, carajillo o shot de aguardiente.    
+Póliza de asistencia médica. 
+
+Horarios: 9am / 2pm  
+ 
+
+-----------
+
+
+*** about section ***
+
+* about main *
+
+Acerca de nosotros
+Colortour Turismo Creativo
+
+Somos un operadora de turismo cultural y creativo ubicada en la comuna 13 de la ciudad de Medellín. Ofrecemos experiencias que narran la transformación de los territorios por medio del arte y el color, haciendo una invitación a vivir. 
+
+Nuestra experiencia está influenciada por la cultura Hip-Hop, en todas sus expresiones: baile, música y graffiti; éstas se han convertido en alternativas para habitar el territorio y reescribir su historia.
+
+En seis años de operación hemos logrado llegar a diferentes ciudades y países, compartiendo nuestra experiencia y asesorando la construcción de procesos similares al nuestro. 
+
+
+* about team *
+
+Chavo
+Fundador
+Lee mi blog
+@chavocensurafotos
+
+Manu
+Fundadora
+Lee mi blog
+@____mbg____
+
+Kbala  
+Fundador 
+Lee mi blog
+@kbalac13
+
+Tati
+Gu​​ía
+Lee mi blog 
+@tatixagu 
+
+Marra
+Guía
+Lee mi blog
+@stivenmonsalve88
+
+Yeso
+Guía
+Lee mi blog
+@yeso.sdc
+
+* about testimonials *
+
+Comentarios
+Dicen de nosotros
+
+<div class='sk-ww-google-reviews' data-embed-id='108439'></div>
+
+<script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+
+
+*** projects section ***
+
+trabajamos para la sociedad
+Proyectos con compromiso social
+
+conoce mas .btn .btn--outline
+
+*** footer ***
+
+Colortour
+Turismo Cultural y Creativo
+@colortourtraveling
+
+Acceso Rápido
+Inicio
+Tours
+Nosotros
+Proyectos
+
+Contacto
+tel:+573045758866
+mailto:info@colortour.com
+https://goo.gl/maps/UJgM8r7uzD91VFoT7 Cra. 109 #38a-3, Veinte de Julio, MED
+
+&copy; 2022 <b><a href="#">Colortour</a></b>. Derechos Reservados

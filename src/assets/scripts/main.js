@@ -31,8 +31,8 @@ const header = document.querySelector('[data-header]');
 
 window.addEventListener('scroll', () => {
   if (header) {
-    header.classList[window.scrollY > 70 ? "add" : "remove"]("is-sticky");
-    navBtn.classList[window.scrollY > 70 ? "add" : "remove"]("btn--accent");
+    header.classList[window.scrollY > 20 ? "add" : "remove"]("is-sticky");
+    navBtn.classList[window.scrollY > 20 ? "add" : "remove"]("btn--accent");
   };
 });
 
@@ -44,7 +44,7 @@ const navLinkActive = () => {
 
   sections.forEach(element => {
     const sectionHeight = element.offsetHeight,
-          sectionTop = element.offsetTop - 70,
+          sectionTop = element.offsetTop - 40,
           sectionId = element.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
