@@ -84,14 +84,25 @@
     .sk-ww-google-reviews
       background-color: transparent !important
 
-      .swiper-wrapper
-        left: 10px !important
+      +until($tablet)
+        .swiper-wrapper
+          left: 0 !important
 
-      .swiper-button-prev
-        left: 25px !important
+        .swiper-button-prev
+          left: 0 !important
+        
+        .swiper-button-next
+          right: 0 !important
       
-      .swiper-button-next
-        right: 25px !important
+      +from($tablet)
+        .swiper-wrapper
+          left: 10px !important
+
+        .swiper-button-prev
+          left: 25px !important
+        
+        .swiper-button-next
+          right: 25px !important
 
       .swiper-button-prev::after, .swiper-button-next::after
         content: ''

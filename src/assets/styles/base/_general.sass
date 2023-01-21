@@ -9,7 +9,7 @@ body
   color: $c-text-dark
   -ms-overflow-style: none
   scrollbar-width: none
-
+  
   &::-webkit-scrollbar
     display: none
 
@@ -30,11 +30,11 @@ a
 .container
   max-width: $max-width
 
-  +until($tablet)
+  +until($max-width)
     margin-inline: $s-16
   
-  +from($tablet)
-    margin: 0 auto
+  +from($max-width)
+    margin-inline: auto
     
 
 .section

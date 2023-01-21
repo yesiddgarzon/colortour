@@ -30,8 +30,8 @@ Familiar
 
 ¡Ven a la comuna 13  y diviértete en familia! Vive esta experiencia llena de amor y esperanza. Conoce cómo el arte transformó la historia de uno de los territorios más violentos de Medellín.
 
-Español: $45.000 (12 USD)
-Inglés: $55.000 (15 USD)
+Español: $45.000 COP Por Persona (12 USD)
+Inglés: $55.000 COP Por Persona (15 USD)
 
 Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:
 Transporte dentro de la comuna.
@@ -51,8 +51,8 @@ Comuna 13
 
 ¡Si lo que buscas es diversión con tus amigos, esta experiencia te va a encantar! Conoce las mejores cervecerías y miradores de la comuna 13, un tour recomendado para disfrutar de buena compañía y una buena cerveza.
 
-Español: $75.000 (19 USD)
-Inglés: $85.000 (22 USD)
+Español: $75.000 COP Por Persona (19 USD)
+Inglés: $85.000 COP Por Persona (22 USD)
 
 Tour de 2 horas y media por la Comuna 13 de Medellín, que incluye:
 Transporte dentro de la comuna.
@@ -90,8 +90,12 @@ Centro Histórico
 
 Reivindica el valor del centro histórico y arquitectónico del centro de la ciudad de Medellín y disfruta de lugares icónicos llenos de historia, música y gastronomía. 
 
-Español: $67.000 (17 USD) / $97.000 (25 USD)*
-Inglés: $77.000 (20 USD) / $107.000 (28 USD)*
+Español: 
+$67.000 COP Por Persona (17 USD) 
+$97.000 COP Por Persona + almuerzo (25 USD)
+Inglés: 
+$77.000 COP Por Persona (20 USD) 
+$107.000 COP Por Persona + almuerzo (28 USD)
 
 * Incluye almuerzo
 
@@ -169,7 +173,7 @@ Dicen de nosotros
 trabajamos para la sociedad
 Proyectos con compromiso social
 
-conoce mas .btn .btn--outline
+conoce mas
 
 *** footer ***
 
