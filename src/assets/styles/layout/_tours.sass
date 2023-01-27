@@ -10,13 +10,27 @@
       position: relative
       border-radius: $radius-16
 
-      .card__title
-        h3
-          line-height: .75
+      .card__intro
+        justify-content: space-between
 
-        span
-          color: $c-text-accent
-          font-weight: $fw-500
+        .card__title, .card__price
+          align-self: flex-start
+
+        .card__title
+          h3
+            line-height: .75
+
+          span
+            color: $c-text-accent
+            font-weight: $fw-500
+        
+        .card__price *
+          margin: 0
+          line-height: 1
+          color: lighten($c-text-dark, 10%)
+
+          span
+            font-size: $fs-6
       
       .card__description
         padding-block: $s-16 0
