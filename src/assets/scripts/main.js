@@ -34,6 +34,22 @@ window.addEventListener("scroll", () => {
 })
 
 /* Scroll Active Link */
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(element => {
+    const sectionHeight = element.offsetHeight,
+          sectionTop = element.offsetTop - 150,
+          sectionId = element.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector(".nav__item a[href*=" + sectionId + "]").classList.add("is-active");
+    } else {
+      document.querySelector(".nav__item a[href*=" + sectionId + "]").classList.remove("is-active");
+    }
+  });
+
+});
 
 
 /* Tour Card Show Info */
