@@ -1,14 +1,12 @@
 @use "../abstract" as *
 
 .footer
-  background-color: $c-secondary-alt
-
-  & *
-    color: $c-text-light
-    transition: $transition
 
   &__content
     padding-block: 0 $s-32
+
+    .container
+      border-top: $border-1 $c-bg-alt
 
     .footer__social
       gap: 8px
@@ -17,7 +15,7 @@
         display: grid
         align-items: center
         padding: $s-8
-        border: $border-1 $c-primary
+        border: $border-1 $c-text-dark
         border-radius: $radius-rounded
         font-size: $fs-4
 
@@ -36,13 +34,12 @@
 
       i
         font-size: $fs-5
-        padding: $s-4
+        padding: $s-8
   
   &__copy
     width: 100%
     padding-block: $s-8
     text-align: center
-    background-color: darken($c-secondary-alt, 5%)
 
   +until($mobile)
     .container.flex

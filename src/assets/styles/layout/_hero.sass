@@ -1,33 +1,28 @@
 @use "../abstract" as *
 
 .hero
+  position: relative
   height: 100vh
-  color: $c-text-light
-  text-align: center
+  background-color: $c-bg-invert
   overflow: hidden
+  text-align: center
 
+  & *
+    color: $c-text-light
+  
   &__bg
     width: 100%
     height: 100%
     object-fit: cover
+    opacity: .4
+    filter: blur(1px)
   
   &__content
     position: absolute
     left: 0
     top: 0
-    z-index: $z-10
     width: 100%
     height: 100%
-    background-color: rgba($c-secondary-alt, .7)
-    flex-direction: column
   
-    .h1, .h6
-      color: $c-text-light
-      margin: 0
-
-      +until($tablet)
-        line-height: 1
-    
-    .h6
-      font-weight: $fw-500
-      text-transform: uppercase
+  &__title p
+    color: $c-text-alt

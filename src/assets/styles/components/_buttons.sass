@@ -3,66 +3,66 @@
 .btn
   padding: $s-8 $s-16
   border: $border-2 transparent
-  background-color: $c-bg-dark
-  color: $c-text-light
+  background-color: transparent
   text-transform: uppercase
   font-size: $fs-7
-  font-weight: $fw-600
-  border-radius: $radius-24
+  font-weight: $fw-semibold
+  border-radius: $radius-8
   transition: $transition
-  text-align: center
+  color: $c-text-dark
 
-  &--primary
-    color: $c-text-light
-    border-color: $c-secondary
-    background-color: $c-secondary
+  +until($tablet)
+    font-size: .725rem
 
-    &:is(:hover, :focus)
-      background-color: transparent
-      color: $c-text-dark
+  &:is(:hover, :focus)
+    background-color: $c-bg-alt
+    border-color: $c-bg-alt
+
+    i
+      margin-bottom: 4px
+      transition: $transition
+
+  i
+    font-size: $fs-7
+    vertical-align: middle
+    font-weight: $fw-bold
   
-  &--primary--light
+  &--fill
+    background-color: $c-bg-invert
+    border-color: $c-bg-invert
     color: $c-text-light
-    border-color: $c-secondary
-    background-color: $c-secondary
 
     &:is(:hover, :focus)
       background-color: transparent
-      color: $c-text-light
-      border-color: $c-primary
+      border-color: $c-bg-invert
+      color: $c-text-dark
 
   &--accent
-    color: $c-text-light
-    border-color: $c-accent !important
     background-color: $c-bg-accent
-
-    &:is(:hover, :focus)
-      background-color: transparent
-      color: $c-accent
-
-  &--outline
-    color: $c-text-dark
-    background-color: transparent
-    border-color: $c-secondary
-
-    &:is(:hover, :focus)
-      background-color: $c-secondary
-      color: $c-primary
-
-  &--outline--light
     color: $c-text-light
-    background-color: transparent
-    border-color: $c-primary
-
-    &:is(:hover, :focus)
-      background-color: $c-primary
-      color: $c-text-accent
-  
-  &--outline--accent
-    color: $c-text-accent
-    background-color: transparent
     border-color: $c-accent
 
     &:is(:hover, :focus)
-      background-color: $c-accent
+      background-color: transparent
+      color: $c-text-accent
+      border-color: $c-accent
+  
+  &--outline
+    background-color: transparent
+    border-color: $c-bg-invert
+
+    &:is(:hover, :focus)
+      background-color: $c-bg-invert
+      border-color: $c-bg-invert
       color: $c-text-light
+
+  &--outline--cta
+    font-size: $fs-6
+    background-color: transparent
+    border-color: $c-bg
+    color: $c-text-light
+
+    &:is(:hover, :focus)
+      background-color: $c-bg
+      border-color: $c-bg
+      color: $c-text-accent

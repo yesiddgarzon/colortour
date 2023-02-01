@@ -1,0 +1,48 @@
+@use "../abstract" as *
+
+.projects__page
+  .header
+    position: initial
+    
+  .project__gallery
+    display: grid
+    gap: 16px
+
+    +until($tablet)
+      grid-template-columns: 1fr
+    
+    +from($tablet)
+      grid-template-columns: 1fr 1fr
+
+    .gallery__item
+      position: relative
+      overflow: hidden
+      border-radius: $radius-24
+      
+      .gallery__image
+        width: 100%
+        height: 100%
+      
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+      +from($tablet)
+        &:nth-child(3)
+          grid-area: 1 / 2 / 3 / 3
+    
+      .project__description
+        position: absolute
+        left: 0
+        top: 100%
+        width: 100%
+        height: 100%
+        background-color: rgba($c-secondary, .75)
+        padding: $s-16
+        color: $c-text-light
+        transition: $transition
+    
+      &:is(:hover, :focus)
+        .project__description
+          top: 0

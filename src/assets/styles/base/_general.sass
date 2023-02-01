@@ -5,7 +5,10 @@ html
   scroll-behavior: smooth
 
 body
-  background-color: $c-bg-light
+  font-size: $fs-6
+  font-weight: $fw-regular
+  line-height: 1.75
+  background-color: $c-bg
   color: $c-text-dark
   -ms-overflow-style: none
   scrollbar-width: none
@@ -28,29 +31,26 @@ a
     color: $c-text-accent
 
 .container
-  max-width: $max-width
+  width: $max-width
+  max-width: calc(100% - ($gap))
   margin-inline: auto
-  padding-inline: $s-16    
 
 .section
-  padding-block: $s-96
+  padding-block: $s-32 calc($s-32 * 2)
 
   &__title
     max-width: 516px
+    margin-inline: auto
+    text-align: center
 
-    +from($tablet)
-      text-align: center
-      margin-inline: auto
-    
-    span
-      color: $c-accent
-      text-transform: uppercase
-      font-weight: $fw-500
+    &::before
+      content: attr(data-subtitle)
+      display: block
       font-size: $fs-7
-      letter-spacing: .2rem
-    
-    h1, .h1
-      line-height: 1.125
+      text-transform: uppercase
+      color: $c-accent
+      font-weight: $fw-medium
+      letter-spacing: 4px
 
 .has-bg-alt
   background: $c-bg-alt

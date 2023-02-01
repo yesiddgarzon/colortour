@@ -15,12 +15,15 @@ header
     align-items: center
 
   &.is-sticky
-    background-color: $c-bg-light
+    background-color: $c-bg
     box-shadow: $shadow-1
     color: $c-text-dark
+
+    .nav__item .btn
+      display: inherit
   
   .header__logo
-    font-weight: $fw-700
+    font-weight: $fw-bold
     font-size: $fs-4
     background: -webkit-linear-gradient($c-accent,$c-primary)
     -webkit-background-clip: text
@@ -28,5 +31,11 @@ header
 
 .projects__page, .blog__page
   header
-    .nav__link, .lang-switcher
+    position: static
+    color: $c-text-dark
+
+    &.is-sticky
+      position: fixed
+
+    .lang-switcher
       color: $c-text-dark

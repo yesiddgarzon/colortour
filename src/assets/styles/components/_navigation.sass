@@ -1,31 +1,37 @@
 @use "../abstract" as *
 
 .main-nav
-  .nav__link
-    font-weight: $fw-500
-    
-    &:is(:hover, :focus), &.is-active
-      color: $c-text-accent
-    
+
+  .nav__link.is-active
+    color: $c-text-accent
+
   +until($tablet)
     position: fixed
     left: 0
     top: -100%
     width: 100%
     padding: $s-32
-    background-color: transparent
-    margin-block: $s-96
+    margin-block: calc($s-32 * 2) $s-32
     z-index: $z-100
     transition: $transition
+    font-weight: $fw-medium
+    background-color: transparent
     color: $c-text-dark
 
     .nav__menu
       flex-direction: column
       padding-block: $s-32
-      background-color: $c-bg-light
-      border: $border-2 rgba($c-secondary, .1)
+      background-color: $c-bg
+      border: $border-2 $c-bg-alt
       border-radius: $radius-24
       box-shadow: $shadow-2
     
     &.is-open
       top: 0
+
+  +from($tablet)
+    .nav__item .btn
+      display: none
+
+  
+

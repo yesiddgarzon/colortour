@@ -6,71 +6,50 @@ const wpMessage = () => {
 };
 
 /* Toggle Navigation */
-const navMenu = document.querySelector('[data-nav]'),
-      navToggle = document.querySelector('[data-nav-toggle]'),
-      navLinks = document.querySelectorAll('[data-nav-link]'),
-      navBtn = document.querySelector('.nav__item .btn');
-      
+const navMenu = document.querySelector("[data-nav]"),
+      navToggle = document.querySelector("[data-nav-toggle]"),
+      navLinks = document.querySelectorAll("[data-nav-link]");
+
 if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('is-open');
-    navToggle.classList.toggle('is-open');
-    navBtn.classList.add('btn--accent');
-  });
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("is-open");
+    navToggle.classList.toggle("is-open");
+  })
 }
 
 navLinks.forEach((e) => {
-  e.addEventListener('click', () => {
-    navMenu.classList.toggle('is-open');
-    navToggle.classList.toggle('is-open');
-  });
-});
+  e.addEventListener("click", () => {
+    navMenu.classList.toggle("is-open");
+    navToggle.classList.toggle("is-open");
+  })
+})
 
 /* Sticky Header */
-const header = document.querySelector('[data-header]');
+const header = document.querySelector("[data-header]")
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (header) {
-    header.classList[window.scrollY > 20 ? "add" : "remove"]("is-sticky");
-    navBtn.classList[window.scrollY > 20 ? "add" : "remove"]("btn--accent");
-  };
-});
+    header.classList[window.scrollY > 10 ? "add" : "remove"]("is-sticky");
+  }
+})
 
 /* Scroll Active Link */
-const sections = document.querySelectorAll("section[id]");
 
-const navLinkActive = () => {
-  let scrollY = window.pageYOffset;
-
-  sections.forEach(element => {
-    const sectionHeight = element.offsetHeight,
-          sectionTop = element.offsetTop - 40,
-          sectionId = element.getAttribute("id");
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document.querySelector(".nav__item a[href*=" + sectionId + "]").classList.add("is-active");
-    } else {
-      document.querySelector(".nav__item a[href*=" + sectionId + "]").classList.remove("is-active");
-    }
-  });
-}
-
-window.addEventListener("scroll", navLinkActive);
 
 /* Tour Card Show Info */
-const tourCardsToggle = document.querySelectorAll('[data-info-toggle]');
-const infoCloseBtns = document.querySelectorAll('[data-info-close-btn]');
-const infoBookBtns = document.querySelectorAll('[data-info-book-btn]');
+const tourCardsToggle = document.querySelectorAll("[data-info-toggle]"),
+      infoCloseBtns = document.querySelectorAll("[data-tour-info-close]"),
+      infoBookBtns = document.querySelectorAll("[data-tour-info-book]");
 
-if (tourCardsToggle) {
+if(tourCardsToggle) {
   tourCardsToggle.forEach(e => {
     e.addEventListener("click", () => {
-      e.parentElement.nextElementSibling.classList.add("is-open");
+      e.parentElement.parentElement.nextElementSibling.classList.add("is-open");
     });
   });
 }
 
-if (infoCloseBtns) {
+if(infoCloseBtns) {
   infoCloseBtns.forEach(e => {
     e.addEventListener("click", () => {
       e.parentElement.classList.remove("is-open");
@@ -78,22 +57,19 @@ if (infoCloseBtns) {
   });
 }
 
-if (infoBookBtns) {
+if(infoBookBtns) {
   infoBookBtns.forEach(e => {
     e.addEventListener("click", () => {
       e.parentElement.classList.remove("is-open");
-      wpMessage();
     });
   });
 }
 
 /* Load More Function */
-const tourCardContainer = document.getElementById("tour-cards"),
-      tourCards = document.querySelectorAll(".tour__card"),
+const tourCardsContainer = document.getElementsByClassName(".tours__cards"),
+      tourCards = document.querySelectorAll(".card__wrapper"),
       loadMoreBtn = document.getElementById("load-more"),
       cardLoad = 3;
-
-console.log();
 
 tourCards.forEach((e, i) => {
   if (i > cardLoad - 1) e.classList.add("is-hidden");
@@ -103,12 +79,11 @@ tourCards.forEach((e, i) => {
 loadMoreBtn.addEventListener("click", () => {
   [].forEach.call(document.querySelectorAll(".is-hidden"), (e, i) => {
     if (i < cardLoad) e.classList.remove("is-hidden");
-    if (document.querySelectorAll(".is-hidden").length === 0) loadMoreBtn.style.display = "none";
+    if (document.querySelectorAll("is-hidden").length === 0) loadMoreBtn.style.display = "none"
   });
 });
 
 /* Swiper Team */
-
 let teamSlider = new Swiper(".team__container", {
   spaceBetween: 24,
   navigation: {

@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
   <title>Colortour Traveling</title>
-  
+
   <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="keywords" content="tour,medellin,comuna 13,escalas,electricas">
+  <meta name="keywords" content="">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Apple Icon -->
+  <link rel="apple-touch-icon" href="../assets/img/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link
@@ -28,56 +27,61 @@
     rel="stylesheet"
   />
 
-  <!-- Custom Styles -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="../assets/css/main.min.css">
 
 </head>
 <body class="projects__page">
+
   <!-- Header -->
   <header class="header" data-header>
+
     <div class="container flex">
-      <a href="../" class="header__logo">
-        Colortour
-      </a>
+
+      <a href="./" class="header__logo">Colortour</a>
+
       <nav class="main-nav" data-nav>
         <ul class="nav__menu flex flex--center" data-nav-menu>
           <li class="nav__item">
-            <a href="../#home" class="nav__link is-active" data-nav-link>Inicio</a>
+            <a href="../#hero" class="nav__link is-active" data-nav-link>Home</a>
           </li>
           <li class="nav__item">
             <a href="../#tours" class="nav__link" data-nav-link>Tours</a>
           </li>
           <li class="nav__item">
-            <a href="../#about" class="nav__link" data-nav-link>Nosotros</a>
+            <a href="../#about" class="nav__link" data-nav-link>About Us</a>
           </li>
           <li class="nav__item">
-            <a href="../#projects" class="nav__link" data-nav-link>Proyectos</a>
+            <a href="../#projects" class="nav__link" data-nav-link>Projects</a>
           </li>
           <li class="nav__item">
             <button class="btn btn--accent" onclick="wpMessage()">
-              reserva ahora
+              book now
             </button>
           </li>
         </ul>
       </nav>
+
       <div class="lang-switcher">
-        <a href="../" class="lang__item is-active">ES</a> | 
-        <a href="../en/" class="lang__item">EN</a>
+        <a href="../" class="lang__item">ES</a> | 
+        <a href="../en/" class="lang__item is-active">EN</a>
       </div>
+
       <div class="nav__toggle" data-nav-toggle>
         <i class="hamburger"></i>
       </div>
+
     </div>
+
   </header>
 
   <!-- Main Content -->
   <main class="main">
     <section class="projects__section section" id="projects">
       <div class="container">
-        <div class="section__title">
-          <span>Compromiso social</span>
-          <h1>Proyectos diferentes</h1>
-        </div>  
+        <h1 class="section__title" data-subtitle="social compromise">
+          Diferent Projects
+        </h1>
         <div class="projects__section__content">
           <div class="project__gallery">
             <div class="gallery__item">
@@ -128,11 +132,14 @@
 
   <!-- Footer -->
   <footer class="footer">
+
     <div class="footer__content">
+
       <div class="container flex">
+
         <div class="footer__resume col">
-          <h4>Colortour</h4>
-          <p>Turismo Cultural y Creativo</p>
+          <h4>Colortour Traveling</h4>
+          <p>Cultural and Creative Turism</p>
           <div class="footer__social flex">
             <a href="https://www.instagram.com/colortourtraveling/" target="_blank" rel="noopener noreferrer">
               <i class='bx bxl-instagram'></i>
@@ -142,12 +149,13 @@
             </a>
           </div>
         </div>
+
         <div class="footer__quicklinks col">
-          <h4>Acceso Rápido</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li>
               <i class='bx bx-chevron-right'></i>
-              <a href="#home">Inicio</a>
+              <a href="#home">Home</a>
             </li>
             <li>
               <i class='bx bx-chevron-right'></i>
@@ -155,16 +163,17 @@
             </li>
             <li>
               <i class='bx bx-chevron-right'></i>
-              <a href="#about">Nosotros</a>
+              <a href="#about">About Us</a>
             </li>
             <li>
               <i class='bx bx-chevron-right'></i>
-              <a href="../projects.html">Proyectos</a>
+              <a href="../en/projects.html">Projects</a>
             </li>
           </ul>
         </div>
+
         <div class="footer__contact col">
-          <h4>Contáctanos</h4>
+          <h4>Contact Us</h4>
           <ul>
             <li>
               <i class='bx bx-phone' ></i>
@@ -184,9 +193,10 @@
         </div>
       </div>
     </div>
+
     <div class="footer__copy">
       <div class="container">
-        &copy; 2023 <b><a href="#">Colortour</a></b>. Derechos Reservados
+        &copy; 2023 <b><a href="#">Colortour</a></b>. All Rights Reserved
       </div>
     </div>
   </footer>
