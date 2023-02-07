@@ -18,7 +18,7 @@
       content: attr(data-card-title)
       display: block
       font-size: $fs-6
-      color: $c-text-accent
+      color: $c-text-alt
 
   &__content
     padding: $s-16
@@ -29,12 +29,31 @@
     &::before
       position: absolute
       z-index: $z-10
-      content: "\2605"
-      display: block
-      left: -20px
-      top: -50px
-      font-size: 64px
-      transform: rotate(-45deg)
-      color: gold
-      text-shadow: $shadow-1
-      -webkit-text-stroke: 1px $c-accent
+      content: ""
+      background-image: url(/assets/img/icon.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 95%
+      left: 0
+      top: -24px
+      width: 64px
+      height: 64px
+      animation: bounce 1.2s cubic-bezier(0.280, 0.840, 0.420, 1) infinite
+      transform-origin: bottom
+
+@keyframes bounce
+  0%
+    transform: scale(1,1) translateY(0)
+  10%
+    transform: scale(1.1,.9) translateY(0)
+  30%
+    transform: scale(.9,1.1) translateY(-32px)
+  50%
+    transform: scale(1.05,.95) translateY(0)
+  57%
+    transform: scale(1,1) translateY(0)
+  64%
+    transform: scale(1,1) translateY(-7px)
+  100%
+    transform: scale(1,1) translateY(0)
+

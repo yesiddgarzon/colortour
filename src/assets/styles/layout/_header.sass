@@ -14,20 +14,26 @@ header
     justify-content: space-between
     align-items: center
 
+  .logo-black
+    display: none
+
   &.is-sticky
     background-color: $c-bg
     box-shadow: $shadow-1
     color: $c-text-dark
 
+    .logo-white
+      display: none
+
+    .logo-black
+      display: initial
+
     .nav__item .btn
       display: inherit
   
-  .header__logo
-    font-weight: $fw-bold
-    font-size: $fs-4
-    background: -webkit-linear-gradient($c-accent,$c-primary)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+  .header__logo img
+    width: 100%
+    height: 40px
 
 .projects__page, .blog__page
   header

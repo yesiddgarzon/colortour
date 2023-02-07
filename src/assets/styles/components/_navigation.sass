@@ -2,8 +2,30 @@
 
 .main-nav
 
-  .nav__link.is-active
-    color: $c-text-accent
+  .nav__link
+    position: relative
+    transition: $transition
+
+  .nav__link:is(:hover, :focus)
+    color: inherit
+
+  .nav__link::after
+    position: absolute
+    left: 0
+    bottom: 0
+
+    content: ""
+    width: 0
+    height: 3px
+
+    background-color: $c-bg-accent
+    transition: $transition
+
+  .nav__link.is-active::after
+    width: 15px
+
+  .nav__link:is(:hover, :focus)::after
+    width: 25px
 
   +until($tablet)
     position: fixed

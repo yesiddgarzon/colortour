@@ -11,10 +11,13 @@
   <meta name="keywords" content="">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/png">
-
-  <!-- Apple Icon -->
-  <link rel="apple-touch-icon" href="../assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="mask-icon" href="../assets/img/safari-pinned-tab.svg" color="#333">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,13 +38,20 @@
 
 </head>
 <body>
+  <!-- RNT -->
+  <div class="rnt">
+    <p class="is-small">RNT: 116960</p>
+  </div>
 
   <!-- Header -->
   <header class="header" data-header>
 
     <div class="container flex">
 
-      <a href="./" class="header__logo">Colortour</a>
+      <a href="./" class="header__logo">
+        <img class="logo-white" src="../assets/img/logo-white.svg" alt="Colortour Logo">
+        <img class="logo-black" src="../assets/img/logo.png" alt="Colortour Logo">
+      </a>
 
       <nav class="main-nav" data-nav>
         <ul class="nav__menu flex flex--center" data-nav-menu>
@@ -120,7 +130,9 @@
                 </div>
 
                 <div class="card__content flex flex--column">
-                  <h3 class="card__title h4" data-card-title="Pa las neas">Comuna 13</h3>
+                  <h3 class="card__title h4" data-card-title="Comuna 13">
+                    Pa' las neas
+                  </h3>
                   <p>
                     ¡Si lo que buscas es diversión con tus amigos, esta experiencia te va a encantar! Conoce las mejores cervecerías y miradores de la comuna 13, un tour recomendado para disfrutar de buena compañía y una buena cerveza.
                   </p>
@@ -140,7 +152,7 @@
 
                 </div>
 
-                <div class="tour__info">
+                <div class="tour__info flex flex--column">
 
                   <button class="tour__info--close" data-tour-info-close>
                     <i class='bx bx-x'></i>
@@ -201,8 +213,8 @@
                 </div>
 
                 <div class="card__content flex flex--column">
-                  <h3 class="card__title h4" data-card-title="Familiar">
-                    Comuna 13
+                  <h3 class="card__title h4" data-card-title="Comuna 13">
+                    Familiar
                   </h3>
                   <p>
                     ¡Ven a la comuna 13  y diviértete en familia! Vive esta experiencia llena de amor y esperanza. Conoce cómo el arte transformó la historia de uno de los territorios más violentos de Medellín.
@@ -223,7 +235,7 @@
 
                 </div>
 
-                <div class="tour__info">
+                <div class="tour__info flex flex--column">
 
                   <button class="tour__info--close" data-tour-info-close>
                     <i class='bx bx-x'></i>
@@ -278,11 +290,11 @@
                 </div>
 
                 <div class="card__content flex flex--column">
-                  <h3 class="card__title h4" data-card-title="Académico">
-                    Comuna 13
+                  <h3 class="card__title h4" data-card-title="Comuna 13">
+                    Académico
                   </h3>
                   <p>
-                    Si deseas conocer la historia del antes y del después de la Comuna 13, en este recorrido la descubrirás, una experiencia llena de datos, cifras, relatos y vivencias que te ayudarán a entender las dinámicas sociales y culturales del sector.
+                    Si deseas conocer a fondo la historia del antes y el después de la comuna 13, en este recorrido la descubrirás; una experiencia llena de relatos, cifras y vivencias que te ayudarán a entender las dinámicas sociales y culturales del sector.
                   </p>
 
                   <div class="card__cta flex">
@@ -296,7 +308,7 @@
 
                 </div>
 
-                <div class="tour__info">
+                <div class="tour__info flex flex--column">
 
                   <button class="tour__info--close" data-tour-info-close>
                     <i class='bx bx-x'></i>
@@ -373,7 +385,7 @@
 
                 </div>
 
-                <div class="tour__info">
+                <div class="tour__info flex flex--column">
 
                   <button class="tour__info--close" data-tour-info-close>
                     <i class='bx bx-x'></i>
@@ -449,7 +461,7 @@
 
                 </div>
 
-                <div class="tour__info">
+                <div class="tour__info flex flex--column">
 
                   <button class="tour__info--close" data-tour-info-close>
                     <i class='bx bx-x'></i>
