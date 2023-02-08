@@ -55,29 +55,33 @@
         font-size: 1rem
 
       .tour__price
-        position: absolute
-        top: $s-16
-        right: $s-16
-        margin: 0
-
-        line-height: 1
+        position: relative
+        left: 0
+        top: -27px
+        width: 100%
         color: $c-text
-        font-weight: $fw-semibold
-        -webkit-text-stroke: .5px $c-text-light
+        font-size: $fs-4
+        font-weight: $fw-bold
+        text-align: center
+        background-color: $c-bg
+        border-radius: $radius-rounded
 
         span
           font-size: $fs-7
-        
-        p
-          font-size: $fs-3
-
-          span
-            font-size: $fs-5
       
       .card__cta
         margin-block-end: $s-16
         gap: $s-8
         justify-content: center
+
+        [data-info-toggle]
+          background-color: $c-bg-alt
+
+        +until($desktop)
+          flex-direction: column-reverse
+
+        .btn
+          font-size: $fs-7
       
       .tour__info
         position: absolute

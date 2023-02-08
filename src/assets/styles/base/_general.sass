@@ -47,12 +47,17 @@ a
     &::before
       content: attr(data-subtitle)
       display: block
+      width: fit-content
+      margin: 0 auto
+      padding: $s-4 $s-16
+      border-radius: $radius-24
       font-size: $fs-7
       text-transform: uppercase
       color: $c-accent
       font-weight: $fw-medium
       letter-spacing: 4px
       font-family: $ff-mono
+      background-color: $c-bg-invert
 
   &--cta
     background-color: $c-bg-accent !important
@@ -63,7 +68,6 @@ a
 
 .has-ff-alt
   font-family: $ff-mono
-  color: $c-text-accent
 
 .rnt
   position: fixed
@@ -71,4 +75,4 @@ a
   right: $s-32
   background-color: transparent
   z-index: $z-1000
-  color: $c-text
+  color: $c-text-light

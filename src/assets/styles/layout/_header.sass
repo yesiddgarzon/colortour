@@ -8,25 +8,16 @@ header
   padding-block: $s-16
   z-index: $z-100
   transition: $transition
-  color: $c-text
+  color: $c-text-light
 
   .flex
     justify-content: space-between
     align-items: center
 
-  .logo-black
-    display: none
-
   &.is-sticky
-    background-color: $c-bg
+    background-color: $c-bg-invert
     box-shadow: $shadow-1
-    color: $c-text
-
-    // .logo-white
-    //   display: none
-
-    // .logo-black
-    //   display: initial
+    color: $c-text-light
 
     .nav__item .btn
       display: inherit

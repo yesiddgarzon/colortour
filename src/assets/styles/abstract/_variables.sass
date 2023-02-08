@@ -1,10 +1,10 @@
 /* Colors */
 
 $c-hue: 84
-$c-secondary: hsl($c-hue, 4%, 100%)
-$c-secondary-alt: hsl($c-hue, 100%, 95%)
-$c-primary: hsl($c-hue, 4%, 15%)
-$c-primary-alt: hsl($c-hue, 4%, 18%)
+$c-primary: hsl($c-hue, 4%, 100%)
+$c-primary-alt: hsl($c-hue, 100%, 95%)
+$c-secondary: hsl($c-hue, 4%, 15%)
+$c-secondary-alt: hsl($c-hue, 4%, 20%)
 $c-accent: hsl($c-hue, 100%, 56%)
 
 $c-bg: $c-primary
@@ -15,7 +15,7 @@ $c-bg-invert: $c-secondary
 $c-text-title: $c-secondary-alt
 $c-text: $c-secondary
 $c-text-light: $c-primary
-$c-text-alt: darken($c-secondary, 50%)
+$c-text-alt: lighten($c-text, 50%)
 $c-text-accent: $c-accent
 
 /* Typography */
@@ -42,7 +42,8 @@ $fw-bold: 700
 /* Responsiveness */
 $mobile: 688px
 $tablet: 992px
-$desktop: 1312px
+$desktop: 1024px
+$wide: 1312px
 
 $max-width: 1280px
 
@@ -55,6 +56,7 @@ $radius-rounded: 50%
 /* Spacing */
 $gap: 32px
 
+$s-4: 4px
 $s-8: 8px
 $s-16: 16px
 $s-32: 32px

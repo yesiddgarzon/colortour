@@ -22,10 +22,10 @@
     transition: $transition
 
   .nav__link.is-active::after
-    width: 15px
+    width: 20px
 
   .nav__link:is(:hover, :focus)::after
-    width: 25px
+    width: 80%
 
   +until($tablet)
     position: fixed
@@ -43,10 +43,11 @@
     .nav__menu
       flex-direction: column
       padding-block: $s-32
-      background-color: $c-bg
+      background-color: $c-bg-invert
       border: $border-2 $c-bg-alt
       border-radius: $radius-24
       box-shadow: $shadow-2
+      color: $c-text-light
     
     &.is-open
       top: 0

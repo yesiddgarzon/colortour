@@ -1,18 +1,15 @@
 @use "../abstract" as *
 
 .btn
-  padding: $s-8 $s-16
+  padding: $s-4 $s-16
   border: $border-2 transparent
   background-color: transparent
   text-transform: uppercase
   font-size: 1rem
-  font-weight: $fw-semibold
+  font-weight: $fw-bold
   border-radius: $radius-8
   transition: $transition
   color: $c-text
-
-  +until($tablet)
-    font-size: $fs-7
     
   &:is(:hover, :focus)
     background-color: $c-bg-alt
@@ -39,7 +36,7 @@
 
   &--accent
     background-color: $c-bg-accent
-    color: $c-text-light
+    color: $c-text
     border-color: $c-accent
 
     &:is(:hover, :focus)
@@ -58,10 +55,10 @@
 
   &--outline--cta
     background-color: transparent
-    border-color: $c-bg
-    color: $c-text-light
+    border-color: $c-bg-invert
+    color: $c-text
 
     &:is(:hover, :focus)
-      background-color: $c-bg
-      border-color: $c-bg
-      color: $c-text
+      background-color: $c-bg-invert
+      border-color: $c-bg-invert
+      color: $c-text-light
