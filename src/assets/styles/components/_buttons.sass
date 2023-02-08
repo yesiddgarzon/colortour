@@ -9,7 +9,7 @@
   font-weight: $fw-semibold
   border-radius: $radius-8
   transition: $transition
-  color: $c-text-dark
+  color: $c-text
 
   +until($tablet)
     font-size: $fs-7
@@ -35,11 +35,11 @@
     &:is(:hover, :focus)
       background-color: transparent
       border-color: $c-bg-invert
-      color: $c-text-dark
+      color: $c-text
 
   &--accent
     background-color: $c-bg-accent
-    color: $c-text-dark
+    color: $c-text-light
     border-color: $c-accent
 
     &:is(:hover, :focus)
@@ -59,9 +59,10 @@
   &--outline--cta
     font-size: 1rem
     background-color: transparent
-    border-color: $c-bg-invert
+    border-color: $c-bg
+    color: $c-text-light
 
     &:is(:hover, :focus)
-      background-color: $c-bg-invert
-      border-color: $c-bg-invert
-      color: $c-text-accent
+      background-color: $c-bg
+      border-color: $c-bg
+      color: $c-text

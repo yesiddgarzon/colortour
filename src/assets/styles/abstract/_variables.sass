@@ -1,19 +1,21 @@
 /* Colors */
 
-$c-primary: #ffffff
-$c-primary-alt: #dddfe6
-$c-secondary: #000
-$c-secondary-alt: rgba($c-secondary, .5)
-$c-accent: rgb(166,255,31)
+$c-hue: 84
+$c-secondary: hsl($c-hue, 4%, 100%)
+$c-secondary-alt: hsl($c-hue, 100%, 95%)
+$c-primary: hsl($c-hue, 4%, 15%)
+$c-primary-alt: hsl($c-hue, 4%, 18%)
+$c-accent: hsl($c-hue, 100%, 56%)
 
 $c-bg: $c-primary
 $c-bg-alt: $c-primary-alt
 $c-bg-accent: $c-accent
 $c-bg-invert: $c-secondary
 
-$c-text-dark: $c-secondary
+$c-text-title: $c-secondary-alt
+$c-text: $c-secondary
 $c-text-light: $c-primary
-$c-text-alt: $c-secondary-alt
+$c-text-alt: lighten($c-secondary, 50%)
 $c-text-accent: $c-accent
 
 /* Typography */
@@ -24,7 +26,7 @@ $ff-body: 'Poppins', $ff-ss-default
 $ff-head: 'Poppins', $ff-ss-default
 $ff-mono: $ff-ms-default
 
-$fs-1: clamp(2.488rem, 3vw + 1.8rem, 3.052rem)
+$fs-1: 2.488rem
 $fs-2: 2.074rem
 $fs-3: 1.728rem
 $fs-4: 1.44rem

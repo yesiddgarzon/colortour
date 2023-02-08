@@ -50,7 +50,7 @@
         height: 48px
         margin: 0
         font-size: 3.815rem
-        color: $c-text-dark
+        color: $c-text-accent
         background-color: transparent
         border: none
 
@@ -71,7 +71,7 @@
       .card__content
         position: absolute
         left: 0
-        bottom: -100px
+        bottom: -80px
         z-index: $z-10
         width: 100%
         padding-block: $s-32 0
@@ -85,14 +85,14 @@
             margin: 0 auto
           
           .profile__position
-            color: darken($c-text-alt, 50%)
+            color: $c-text-alt
         
         .content__social
           padding-block: $s-16
 
           .social__link
             font-size: $fs-1
-            color: lighten($c-text-dark, 30%)
+            color: lighten($c-text, 30%)
 
             &:is(:hover, :focus)
               color: $c-text-accent

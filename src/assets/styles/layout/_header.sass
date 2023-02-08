@@ -8,7 +8,7 @@ header
   padding-block: $s-16
   z-index: $z-100
   transition: $transition
-  color: $c-text-light
+  color: $c-text
 
   .flex
     justify-content: space-between
@@ -20,28 +20,29 @@ header
   &.is-sticky
     background-color: $c-bg
     box-shadow: $shadow-1
-    color: $c-text-dark
+    color: $c-text
 
-    .logo-white
-      display: none
+    // .logo-white
+    //   display: none
 
-    .logo-black
-      display: initial
+    // .logo-black
+    //   display: initial
 
     .nav__item .btn
       display: inherit
   
   .header__logo img
     width: 100%
+    max-width: 50px
     height: 40px
 
 .projects__page, .blog__page
   header
     position: static
-    color: $c-text-dark
+    color: $c-text
 
     &.is-sticky
       position: fixed
 
     .lang-switcher
-      color: $c-text-dark
+      color: $c-text
