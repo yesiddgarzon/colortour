@@ -2,7 +2,7 @@
 
 Colortour Traveling
 
-Graffiti tour comuna 13, arte y transformación. Centro Histórico de Medellín, conoce la historia y arquitectura de esta gran ciudad.
+
 
 
 
@@ -222,4 +222,4 @@ tel:+573045758866
 mailto:info@colortour.com
 https://goo.gl/maps/UJgM8r7uzD91VFoT7 Cra. 109 #38a-3, Veinte de Julio, MED
 
-&copy; 2022 <b><a href="#">Colortour</a></b>. Derechos Reservados
+&copy; 2023 <b><a href="#">Colortour</a></b>. Derechos Reservados
