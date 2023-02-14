@@ -26,14 +26,16 @@ header
     width: 100%
     max-width: 50px
     height: 40px
+    vertical-align: middle
 
 .projects__page, .blog__page
-  header
+  header, .header
     position: static
-    color: $c-text
+    color: $c-text-light
+    background-color: $c-bg-invert
+
+    .btn
+      display: initial
 
     &.is-sticky
       position: fixed
-
-    .lang-switcher
-      color: $c-text

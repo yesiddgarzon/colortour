@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
   <title>Colortour Traveling</title>
-  
+
   <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="keywords" content="tour,medellin,comuna 13,escalas,electricas">
+  <meta name="description" content="Descubre la comuna 13 de la mano de quienes ayudaron a transformar este territorio">
+  <meta name="keywords" content="graffitour,graffiti,medellin,colortour,comuna 13,turismo,tour,colortour,travel">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link 
+    rel="apple-touch-icon" 
+    sizes="180x180" 
+    href="../assets/img/apple-touch-icon.png"
+  >
+  <link 
+    rel="icon" 
+    type="image/png" 
+    sizes="32x32" 
+    href="../assets/img/favicon-32x32.png"
+  >
+  <link 
+    rel="icon" 
+    type="image/png" 
+    sizes="16x16" 
+    href="../assets/img/favicon-16x16.png"
+  >
   <link rel="manifest" href="../site.webmanifest">
-  <link rel="mask-icon" href="../assets/img/safari-pinned-tab.svg" color="#333">
+  <link 
+    rel="mask-icon" 
+    href="../assets/img/safari-pinned-tab.svg" 
+    color="#333"
+  >
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="theme-color" content="#ffffff">
 
@@ -31,31 +48,50 @@
     rel="stylesheet"
   />
 
-  <!-- Custom Styles -->
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="../assets/css/main.min.css">
 
 </head>
 <body class="blog__page">
+  
+  <!-- RNT -->
+  <div class="rnt">
+    <p class="is-small">RNT: 116960</p>
+  </div>
 
   <!-- Header -->
   <header class="header" data-header>
+
     <div class="container flex">
+
       <a href="../" class="header__logo">
-        Colortour
+        <img class="logo__img" src="../assets/img/logo.svg" alt="Colortour Logo">
       </a>
+
       <nav class="main-nav" data-nav>
         <ul class="nav__menu flex flex--center" data-nav-menu>
           <li class="nav__item">
-            <a href="../#home" class="nav__link" data-nav-link>Inicio</a>
+            <a href="../#home" class="nav__link is-active" data-nav-link>
+              Inicio
+            </a>
           </li>
           <li class="nav__item">
-            <a href="../#tours" class="nav__link" data-nav-link>Tours</a>
+            <a href="../#tours" class="nav__link" data-nav-link>
+              Tours
+            </a>
           </li>
           <li class="nav__item">
-            <a href="../#about" class="nav__link" data-nav-link>Nosotros</a>
+            <a href="../#about" class="nav__link" data-nav-link>
+              Nosotros
+            </a>
           </li>
           <li class="nav__item">
-            <a href="../#projects" class="nav__link" data-nav-link>Proyectos</a>
+            <a href="../#projects" class="nav__link" data-nav-link>
+              Proyectos
+            </a>
           </li>
           <li class="nav__item">
             <button class="btn btn--accent" onclick="wpMessage()">
@@ -64,14 +100,18 @@
           </li>
         </ul>
       </nav>
+
       <div class="lang-switcher">
         <a href="../blog/yeso.html" class="lang__item is-active">ES</a> | 
         <a href="../en/blog/yeso.html" class="lang__item">EN</a>
       </div>
+
       <div class="nav__toggle" data-nav-toggle>
         <i class="hamburger"></i>
       </div>
+
     </div>
+
   </header>
 
   <!-- Main Content -->
@@ -104,7 +144,7 @@
       </section>
       <aside class="blog__bio">
         <figure class="bio__img">
-          <img src="../assets/img/team-yeso.JPG" alt="Yeso">
+          <img src="../assets/img/team/yeso.jpg" alt="Yeso">
         </figure>
         <div class="bio__content">
           <h4>Yeso</h4>
