@@ -1,7 +1,7 @@
 *** SEO ***
 
 Colortour Traveling
-Discover commune 13 by the hand of those who helped transform this territory
+Discover commune 13 with Colortour. Go in the company of those who helped transform the territory. Book now!
 
 *** header ***
 
@@ -11,16 +11,11 @@ Home
 Tours
 About us
 Projects
-book now
 
-ES | EN lang-switcher
+*** home section ***
 
-*** hero section ***
+Colortour Traveling. Cultural and Creative Tourism. Click here to book!
 
-Colortour Traveling
-Cultural and Creative Turism
-
-book now
 
 *** tours section ***
 
@@ -86,6 +81,7 @@ Transportation within the Comuna.
 Natural homemade mango ice cream.
 Tour guide from the Comuna.
 Dance or freestyle show.
+
 Schedule: 9am / 2pm / 5:30pm
 
 * We recommend do the tour in the morning since there are less people.
@@ -160,41 +156,33 @@ Our experience as a company is influenced by Hip Hop Culture in all its elements
 
 In six years of operation we have reach different cities and countries sharing our experience and advising on the construction of similar processes.
 
-
 * about team *
-
 
 our team
 Storytelling Experts
 
 Chavo
 Founder
-Read my blog
 @chavocensurafotos
 
 Manu
-Foundera
-Read my blog
+Founder
 @____mbg____
 
 Kbala  
 Founder 
-Read my blog
 @kbalac13
 
 Tati
 Tour Guide
-Read my blog 
 @tatixagu 
 
 Marra
 Tour Guide
-Read my blog
 @stivenmonsalve88
 
 Yeso
 Tour Guide
-Read my blog
 @yeso.sdc
 
 * about testimonials *
@@ -209,11 +197,10 @@ What people say about us
 
 *** projects section ***
 
+We work for the community
 Social Projects
 
-Lorem ipsum dolor, sit amet, consectetur adipisicing elit.
-
-more info
+We have different projects to help the community of Comuna 13
 
 *** footer ***
 
@@ -221,7 +208,7 @@ Colortour
 Cultural and Creative Turism
 @colortourtraveling
 
-Acceso Rápido
+Quick Links
 Home
 Tours
 About us
@@ -233,3 +220,14 @@ mailto:info@colortour.com
 https://goo.gl/maps/UJgM8r7uzD91VFoT7 Cra. 109 #38a-3, Veinte de Julio, MED
 
 &copy; 2023 <b><a href="#">Colortour</a></b>. All Rights Reserved
+
+
+PROJECTS PAGE
+
+SHOES FOR LOVE
+
+This is a Project that helps reduce levels of inequality, providing new shoes or tennis shoes to children in the peripheral neighborhoods of Medellín, dignifying their quality of life and their good development. If you also want to be part of this project and change the lives of many children, contact us! 
+
+FOOD FOR LOVE
+
+This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us! 

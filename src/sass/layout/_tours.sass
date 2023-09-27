@@ -1,0 +1,106 @@
+@use "../abstract" as *
+
+.tours
+  &__wrapper
+    flex-wrap: wrap
+    justify-content: center
+  
+  .tour__card
+    position: relative
+    overflow: hidden
+    border-radius: $radius-16
+    box-shadow: $shadow-1
+    transition: $transition
+    background-color: $c-bg
+  
+    &:is(:hover, :focus)
+      box-shadow: $shadow-2
+    
+    &.is-hidden
+      position: absolute
+      clip: rect(0 0 0 0)
+      height: 1px
+      width: 1px
+      margin: -1px
+      padding: 0
+      border: 0
+    
+    +until($mobile)
+      width: 100%
+    
+    +from($mobile)
+      width: calc((100% / 2) - $gap)
+      
+    +from($desktop)
+      width: calc((100% / 3) - $gap)
+    
+    .card__img
+      width: 100%
+    
+    .tour__price
+      position: relative
+      left: 0
+      top: -27px
+      width: 100%
+      font-size: $fs-4
+      font-weight: $fw-bold
+      text-align: center
+      border-radius: $radius-16
+      background-color: $c-bg
+
+      span
+        font-size: $fs-7
+    
+    .card__title::after
+      content: attr(data-card-title)
+      display: block
+      font-size: $fs-7
+      color: $c-text-alt
+      font-family: $ff-body
+      font-weight: $fw-semibold
+
+    .card__content, .tour__info
+      padding-inline: $s-16
+    
+    .card__content
+      text-align: center
+    
+    .card__title
+      margin-top: 0
+    
+    .card__cta
+      padding-bottom: $s-32
+
+      +until($desktop)
+        flex-direction: column-reverse
+      
+      +from($desktop)
+        a, button
+          font-size: $fs-7 !important
+
+    .tour__info
+      position: absolute
+      left: 0
+      top: 100%
+      width: 100%
+      height: 100%
+      border-radius: $radius-16
+      background-color: transparentize($c-bg, .15)
+      opacity: 0
+      transition: $transition
+    
+      &.is-open
+        top: 0
+        opacity: 1
+      
+      .btn
+        margin-inline: auto
+
+    [data-tour-info-close]
+      font-size: $fs-2
+      font-weight: $fw-bold
+      align-self: flex-end
+      color: $c-text
+  
+  &__load-more-btn
+    margin: $s-32 auto

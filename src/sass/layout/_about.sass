@@ -1,0 +1,125 @@
+@use "../abstract" as *
+
+.about
+
+  &__main
+
+    +from($tablet)
+      .section__title, .section__title::before
+        margin-left: 0
+
+    &__img
+      text-align: center
+
+    .about__img
+      width: 100%
+      border-radius: $radius-16
+
+    .flex
+      +until($tablet)
+        flex-direction: column
+      
+      +from($tablet)
+        flex-direction: row-reverse
+        align-items: center
+
+        .section__title
+          text-align: left
+  
+  &__team
+    .team__cards__container
+      padding-block: 1rem
+
+      .swiper-button-prev:after, .swiper-button-next:after
+        content: ""
+      
+      .swiper-button-prev, .swiper-button-next
+        width: initial
+        height: initial
+        padding: 0
+        background: transparent
+        border: none
+        font-size: $fs-1
+        color: $c-text-alt
+        
+      .swiper-button-prev
+        left: -1rem
+
+      .swiper-button-next 
+        right: -1rem
+
+    .cards__content
+      margin-inline: 1.75rem
+      border-radius: $radius-24
+      overflow: hidden
+
+    .team__card
+      border-radius: $radius-24
+      overflow: hidden
+
+      &:is(:hover, :focus) .card__data
+        bottom: 0
+
+    .card__wrapper
+      position: relative
+
+    .card__image
+      background-color: $c-bg
+
+    .card__data
+      position: absolute
+      left: 0
+      bottom: -100px
+      width: 100%
+      padding-block: $s-16
+      z-index: $z-10
+      background-color: $c-bg
+      text-align: center
+      transition: $transition
+
+    .card__img
+      width: 100%
+      height: auto
+      position: relative
+
+    .card__name
+      margin: 0
+
+    .card__description
+      color: $c-text-alt
+
+    .card__social
+      font-size: $fs-1
+  
+  &__testimonials
+    .comments__container
+      overflow: hidden
+
+    .sk_branding .tutorial_link
+      display: none !important
+
+    .sk-ww-google-reviews
+      background-color: transparent !important
+
+      +until($tablet)
+        .swiper-wrapper
+          left: 0 !important
+
+        .swiper-button-prev
+          left: -5px !important
+        
+        .swiper-button-next
+          right: 0 !important
+      
+      +from($tablet)
+        .swiper-wrapper
+          left: 10px !important
+
+        .swiper-button-prev
+          left: 25px !important
+        
+        .swiper-button-next
+          right: 25px !important
+
+      .swiper-button-prev::after, .swiper-button-next::after
+        content: ''

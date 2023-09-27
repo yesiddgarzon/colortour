@@ -1,0 +1,46 @@
+@use "../abstract" as *
+
+.home
+  .home__carousel
+    height: auto
+
+  .swiper-button-next, .swiper-button-prev 
+    display: none
+
+    +from($tablet)
+      display: initial
+      width: auto
+      height: auto
+      padding: 0
+      background-color: transparent
+      border: none
+      color: $c-text-accent
+
+  .swiper-pagination-bullet
+    background-color: $c-accent
+
+  .home__cta 
+    width: 100%
+    background-color: $c-bg-invert
+    overflow: hidden
+
+  .home__cta a:is(:hover, :focus)
+    color: inherit
+
+  .home__cta a
+    position: relative
+
+  .home__cta h1
+    position: relative
+    margin: 0
+    width: 95ch
+    padding-block: $s-4
+    transform: translateX(100%)
+    animation: scroll-text 10s linear infinite
+    color: $c-text-accent
+
+@keyframes scroll-text
+  from 
+    transform: translateX(130%)
+  to
+    transform: translateX(-100%)

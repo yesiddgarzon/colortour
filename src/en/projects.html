@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
   <title>Colortour Traveling</title>
 
-  <!-- Meta Tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover commune 13 by the hand of those who helped transform this territory">
-  <meta name="keywords" content="graffitour,graffiti,medellin,colortour,comuna 13,turismo,tour,colortour,travel">
-
   <!-- Favicon -->
-  <link 
-    rel="apple-touch-icon" 
-    sizes="180x180" 
-    href="../assets/img/apple-touch-icon.png"
-  >
-  <link 
-    rel="icon" 
-    type="image/png" 
-    sizes="32x32" 
-    href="../assets/img/favicon-32x32.png"
-  >
-  <link 
-    rel="icon" 
-    type="image/png" 
-    sizes="16x16" 
-    href="../assets/img/favicon-16x16.png"
-  >
-  <link rel="manifest" href="../site.webmanifest">
-  <link 
-    rel="mask-icon" 
-    href="../assets/img/safari-pinned-tab.svg" 
-    color="#333"
-  >
-  <meta name="msapplication-TileColor" content="#2b5797">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+  
+  <!-- General -->
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="canonical" href="https://www.colortourtraveling.com/" />
+  <meta name="application-name" content="Colortour Traveling" />
+  <meta name="author" content="Yesid Garzon" />
+  <meta name="description" content="Discover commune 13 with Colortour. Go in the company of those who helped transform the territory. Book now!" />
+  <meta
+    name="keywords"
+    content="graffitour,graffititour,comuna 13,medellin,colortour,turismo,tour,travel"
+  />
+  <meta name="referrer" content="strict-origin" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Microsoft -->
+  <meta name="msapplication-starturl" content="/" />
+  <meta name="msapplication-tooltip" content="Colortour Traveling" />
+  <meta name="msapplication-TileColor" content="#a5ff1f" />
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-title" content="Colortour Traveling" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#a5ff1f" />
+
+  <!-- Android -->
+  <meta name="theme-color" content="#a5ff1f" />
+  <meta name="color-scheme" content="light" />
+  <meta name="mobile-web-app-capable" content="yes" />
 
   <!-- Icons -->
   <link
@@ -48,49 +45,55 @@
     rel="stylesheet"
   />
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../assets/css/main.min.css">
-
+  <!-- Styles and Scripts -->
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preload" href="../js/script.js" as="script">  
 </head>
 <body class="projects__page">
+  <!-- RNT -->
+  <div class="rnt">
+    <p class="is-small">RNT: 116960</p>
+  </div>
 
   <!-- Header -->
   <header class="header" data-header>
-
     <div class="container flex">
-
       <a href="./" class="header__logo">
-        <img class="logo__img" src="../assets/img/logo.svg" alt="Colortour Logo">
+        <img src="../img/logo.png" alt="Colortour Logo" class="logo" loading="lazy">
       </a>
 
       <nav class="main-nav" data-nav>
         <ul class="nav__menu flex flex--center" data-nav-menu>
+          <li class="nav__item"><a href="#home" class="nav__link" data-nav-link>
+            Home
+          </a></li>
+          <li class="nav__item"><a href="./#tours" class="nav__link" data-nav-link>
+            Tours
+          </a></li>
+          <li class="nav__item"><a href="./#about" class="nav__link" data-nav-link>
+            About Us
+          </a></li>
+          <li class="nav__item"><a href="#home" class="nav__link is-active" data-nav-link>
+            Projects
+          </a></li>
           <li class="nav__item">
-            <a href="#home" class="nav__link" data-nav-link>Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="../#tours" class="nav__link" data-nav-link>Tours</a>
-          </li>
-          <li class="nav__item">
-            <a href="../#about" class="nav__link" data-nav-link>About us</a>
-          </li>
-          <li class="nav__item">
-            <a href="../#projects" class="nav__link is-active" data-nav-link>Projects</a>
-          </li>
-          <li class="nav__item">
-            <button class="btn btn--accent" onclick="wpMessage()">
+            <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--accent">
               book now
-            </button>
+            </a>
+            </a>
           </li>
         </ul>
       </nav>
 
       <div class="lang-switcher">
         <a href="../projects.html" class="lang__item">ES</a> | 
-        <a href="../en/projects.html" class="lang__item is-active">EN</a>
+        <a href="#" class="lang__item is-active">EN</a>
       </div>
 
       <div class="nav__toggle" data-nav-toggle>
@@ -98,73 +101,89 @@
       </div>
 
     </div>
-
   </header>
 
-  <!-- Main Content -->
-  <main class="main">
+  <!-- Main -->
+  <main class="main" id="home" data-main>
+
     <section class="projects__section section" id="projects">
       <div class="container">
-        <h1 class="section__title" data-subtitle="social compromise">
-          Diferent Projects
+        <h1 class="section__title" data-subtitle="compromiso social">
+          Proyectos diferentes
         </h1>
         <div class="projects__section__content">
           <div class="project__gallery">
             <div class="gallery__item">
               <figure class="gallery__image">
-                <img src="../assets/img/projects/gallery-1.jpg" alt="Gallery Image">
+                <img src="../img/project-1.jpg" alt="Gallery Image" loading="lazy">
               </figure>
               <div class="project__description flex flex--center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, non, reprehenderit exercitationem natus neque animi et libero ipsa labore unde aliquid? Fuga quidem minima aut autem! Aut odit eligendi sapiente?
+                SHOES FOR LOVE
+                <br>
+                This is a Project that helps reduce levels of inequality, providing new shoes or tennis shoes to children in the peripheral neighborhoods of Medellín, dignifying their quality of life and their good development. If you also want to be part of this project and change the lives of many children, contact us!             
               </div>
             </div>
             <div class="gallery__item">
               <figure class="gallery__image">
-                <img src="../assets/img/projects/gallery-2.jpg" alt="Gallery Image">
+                <img src="../img/project-2.jpg" alt="Gallery Image" loading="lazy">
               </figure>
               <div class="project__description flex flex--center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, non, reprehenderit exercitationem natus neque animi et libero ipsa labore unde aliquid? Fuga quidem minima aut autem! Aut odit eligendi sapiente?
+                FOOD FOR LOVE
+                <br>
+                This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us!             
               </div>
             </div>
             <div class="gallery__item">
               <figure class="gallery__image">
-                <img src="../assets/img/projects/gallery-3.jpg" alt="Gallery Image">
+                <img src="../img/project-3.jpg" alt="Gallery Image" loading="lazy">
               </figure>
               <div class="project__description flex flex--center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, non, reprehenderit exercitationem natus neque animi et libero ipsa labore unde aliquid? Fuga quidem minima aut autem! Aut odit eligendi sapiente?
+                FOOD FOR LOVE
+                <br>
+                This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us!               
               </div>
             </div>
             <div class="gallery__item">
               <figure class="gallery__image">
-                <img src="../assets/img/projects/gallery-4.jpg" alt="Gallery Image">
+                <img src="../img/project-4.jpg" alt="Gallery Image" loading="lazy">
               </figure>
               <div class="project__description flex flex--center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, non, reprehenderit exercitationem natus neque animi et libero ipsa labore unde aliquid? Fuga quidem minima aut autem! Aut odit eligendi sapiente?
+                FOOD FOR LOVE
+                <br>
+                This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us!              
               </div>
             </div>
             <div class="gallery__item">
               <figure class="gallery__image">
-                <img src="../assets/img/projects/gallery-5.jpg" alt="Gallery Image">
+                <img src="../img/project-5.jpg" alt="Gallery Image" loading="lazy">
               </figure>
               <div class="project__description flex flex--center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, non, reprehenderit exercitationem natus neque animi et libero ipsa labore unde aliquid? Fuga quidem minima aut autem! Aut odit eligendi sapiente?
+                SHOES FOR LOVE
+                <br>
+                This is a Project that helps reduce levels of inequality, providing new shoes or tennis shoes to children in the peripheral neighborhoods of Medellín, dignifying their quality of life and their good development. If you also want to be part of this project and change the lives of many children, contact us!             
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <div class="support__btn">
+          <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
+            Support Us
+          </a>
+        </div>
+
+      </div>   
     </section>
+
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-
     <div class="footer__content">
-
       <div class="container flex">
 
         <div class="footer__resume col">
-          <h4>Colortour Traveling</h4>
+          <h4>Colortour</h4>
           <p>Cultural and Creative Turism</p>
           <div class="footer__social flex">
             <a href="https://www.instagram.com/colortourtraveling/" target="_blank" rel="noopener noreferrer">
@@ -189,17 +208,17 @@
             </li>
             <li>
               <i class='bx bx-chevron-right'></i>
-              <a href="#about">About Us</a>
+              <a href="#about">About us</a>
             </li>
             <li>
               <i class='bx bx-chevron-right'></i>
-              <a href="../en/projects.html">Projects</a>
+              <a href="../projects.html">Projects</a>
             </li>
           </ul>
         </div>
 
         <div class="footer__contact col">
-          <h4>Contact Us</h4>
+          <h4>Contact us</h4>
           <ul>
             <li>
               <i class='bx bx-phone' ></i>
@@ -217,23 +236,32 @@
             </li>
           </ul>
         </div>
+
       </div>
     </div>
 
     <div class="footer__copy">
       <div class="container">
-        &copy; 2023 <b><a href="#">Colortour</a></b>. All Rights Reserved
+        &copy; 2023 <b><a href="#">Colortour</a></b>. All Rights Reserved.
       </div>
     </div>
+    
   </footer>
 
-  <!-- Whatsapp Floating Button -->
-  <button class="wp__btn flex flex--center" onclick="wpMessage()">
-    <i class='bx bxl-whatsapp'></i>
-  </button>
+  <!-- Floating Social Buttons -->
+  <div class="social-menu flex flex--column">
+    <a href="https://www.instagram.com/colortourtraveling/">
+      <i class="bx bxl-instagram"></i>
+    </a>
+    <a href="tel:+573045758866">
+      <i class='bx bx-phone-call' ></i>
+    </a>
+    <a href="http://wa.me/573045758866">
+      <i class="bx bxl-whatsapp"></i>
+    </a>
+  </div>
 
-  <!-- Custom js -->
-  <script src="../assets/js/main.min.js"></script>
-
+  <!-- Scripts -->
+  <script src="/js/script.js" type="module"></script>  
 </body>
 </html>

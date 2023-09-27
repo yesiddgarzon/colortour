@@ -1,0 +1,25 @@
+@use "../abstract" as *
+
+header
+  width: 100%
+  background-color: $c-bg
+  padding-block: $s-16
+  z-index: $z-100
+  transition: $transition
+
+  .flex
+    justify-content: space-between
+    align-items: center
+
+  &.is-sticky
+    position: fixed
+    box-shadow: $shadow-1
+
+    .nav__item .btn
+      display: inherit
+  
+  .header__logo img
+    width: 100%
+    max-width: 50px
+    height: 40px
+    vertical-align: middle

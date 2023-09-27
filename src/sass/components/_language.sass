@@ -1,0 +1,8 @@
+@use "../abstract" as *
+
+.lang-switcher
+  .lang__item
+    font-weight: $fw-semibold
+
+    &.is-active, &:is(:hover, :focus)
+      color: $c-text-alt
