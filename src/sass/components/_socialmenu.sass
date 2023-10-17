@@ -2,19 +2,19 @@
 
 .social-menu
   position: fixed
-  right: 0
-  bottom: 15%
+  right: 4px
+  top: 50%
   z-index: $z-1000
   padding: $s-8
-  border-radius: $radius-8 0 0 $radius-8
-  background-color: rgba(0, 0, 0, .5)
+  border-radius: $radius-8
+  background-color: rgba(0, 0, 0, .7)
   gap: 0 !important
-
+  
   a 
     font-size: $fs-3
     color: $c-text-light
+    transition: transform .7s ease-in-out
 
     &:hover
       color: $c-text-accent
-      font-size: $fs-2
-      transform: translateY(2px)
+      transform: rotate(360deg)
