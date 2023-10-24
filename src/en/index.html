@@ -48,7 +48,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif&family=Montserrat&display=swap" rel="stylesheet">
 
   <!-- Swiper -->
   <link
@@ -58,77 +58,84 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" as="script">
 
   <!-- Styles and Scripts -->
-  <link rel="preload" href="../css/style.css" as="style">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="preload" href="../js/script.js" as="script">  
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="/js/script.js" as="script">  
 </head>
 <body>
-  <!-- RNT -->
-  <div class="rnt container">
-    <p class="is-small">RNT: 116960</p>
-  </div>
-
   <!-- Header -->
   <header class="header" data-header>
-    <div class="container flex">
-      <a href="#" class="header__logo">
-        <img src="../img/logo.png" alt="Colortour Logo" class="logo" loading="lazy">
+    <div class="container flex flex--align-center flex--justify-space-between">
+
+      <a href="/" class="header__logo flex flex--align-center">
+        <img src="../img/logo_ctr.svg" alt="Colortour Traveling" loading="lazy">
       </a>
 
       <nav class="main-nav" data-nav>
-        <ul class="nav__menu flex flex--center" data-nav-menu>
-          <li class="nav__item"><a href="#home" class="nav__link is-active" data-nav-link>
-            Home
-          </a></li>
-          <li class="nav__item"><a href="#tours" class="nav__link" data-nav-link>
-            Tours
-          </a></li>
-          <li class="nav__item"><a href="#about" class="nav__link" data-nav-link>
-            About Us
-          </a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link" data-nav-link>
-            Projects
-          </a></li>
+        <ul class="nav__menu flex">
+          <i class='bx bx-x' data-nav-close></i>
+          <li class="nav__item">
+            <a href="#home" class="nav__link is-active" data-nav-link>Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#tours" class="nav__link" data-nav-link>Tours</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link" data-nav-link>About Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link" data-nav-link>Projects</a>
+          </li>
           <li class="nav__item">
             <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--accent">
-              book now
-            </a>
+              contact us
             </a>
           </li>
         </ul>
       </nav>
 
       <div class="lang-menu">
-        <a href="../" class="lang__item">
-          <img src="../img/flag_co.png" alt="Idioma Español" class="lang__img" loading="lazy">
-        </a>
-        <a href="#" class="lang__item is-active">
-          <img src="../img/flag_us.png" alt="Idioma Inglés" class="lang__img" loading="lazy">
-        </a>
+        <button class="lang-menu__btn item__link">
+          <img src="../img/flag_us.png" alt="US Flag" class="item__flag" loading="lazy">
+          <span class="item__lang">English</span>
+          <i class='bx bx-chevron-down item__icon'></i>
+        </button>
+        <ul class="lang-menu__list">
+          <li class="lang-menu__item">
+            <a href="../" class="item__link">
+              <img src="../img/flag_co.png" alt="Colombia Flag" class="item__flag" loading="lazy">
+              <span class="item__lang">Spanish</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <div class="nav__toggle" data-nav-toggle>
-        <i class="hamburger"></i>
-      </div>
+      <i class='bx bx-menu' data-nav-open></i>
 
     </div>
   </header>
 
-  <!-- Main -->
+  <!-- Main Content -->
   <main class="main" data-main>
 
-    <!-- Home section -->
-    <section id="home" class="home">
+    <!-- Home Section -->
+    <section class="home" id="home">
       <div class="container full-width">
+
         <div class="home__carousel swiper">
           <div class="swiper-wrapper">
-            <img src="img/home-1.png" alt="Comuna 13 Tour" class="carousel__img swiper-slide" loading="lazy">
-            <img src="img/home-2.png" alt="Centro Tour" class="carousel__img swiper-slide" loading="lazy">
-            <img src="img/home-3.png" alt="Guatape Tour" class="carousel__img swiper-slide" loading="lazy">
-            <img src="img/home-4.png" alt="Colortour Home" class="carousel__img swiper-slide" loading="lazy">              
+            <img src="../img/home-1.png" alt="Tour Comuna 13" class="carousel__img swiper-slide" loading="lazy">
+            <img src="../img/home-2.png" alt="Tour Centro" class="carousel__img swiper-slide" loading="lazy">
+            <img src="../img/home-3.png" alt="Tour Guatape" class="carousel__img swiper-slide" loading="lazy">
+            <img src="../img/home-4.png" alt="Colortour" class="carousel__img swiper-slide" loading="lazy">
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+
+          <div class="swiper-button-next">
+            <i class='bx bx-chevron-right' ></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class='bx bx-chevron-left' ></i>
+          </div>
           <div class="swiper-pagination"></div>
         </div>
 
@@ -140,412 +147,262 @@
       </div>
     </section>
 
-     <!-- Tours section -->
-     <section class="tours section" id="tours">
+    <!-- Tours Section -->
+    <section class="tours section" id="tours">
       <div class="container">
         <h2 class="section__title" data-subtitle="what we offer">
           Enjoy our tours
         </h2>
 
         <div class="tours__wrapper flex">
-          
-          <div class="tour__card">
-            <img src="../img/tour-familia.jpg" alt="Tour Familiar Comuna 13" class="card__img" loading="lazy">
 
-            <div class="tour__price">
-              <span>From </span>$45.<span>000 COP</span>
-            </div>
-
-            <div class="card__content flex flex--column">
-              <h3 class="card__title" data-card-title="Comuna 13">
-                Family
-              </h3>
-              <p>
-                Come and have fun with your family! Live this experience full of love and hope. Learn how the art changed the history of one of the most violent place in Medellín.
-              </p>
-              <p class="content__price">
-                <b>Spanish:</b><br> $45.000 COP Per Person ($12 USD)<br><br>
-                <b>English:</b><br> $55.000 COP Per Person ($15 USD)
-              </p>
-
-              <div class="card__cta flex flex--center">
+          <div class="tour__card card">
+            <img src="../img/tour-comuna.jpg" alt="Tour Comuna 13" loading="lazy" class="card__image">
+            <div class="card__content">
+              <div class="card__title flex flex--align-center">
+                <h3 class="card__name col-70" data-card-subtitle="Graffitour">
+                  Comuna 13 Tour
+                </h3>
+                <div class="card__price col-30">
+                  <h4>$45.000</h4>
+                  <span class="is-small">Per Person</span>
+                </div>
+              </div>
+              <div class="card__description">
+                <p>!Come to Comuna 13 and enjoy!</p>
+                <div class="card__info">
+                  <div class="info__wrapper">
+                    <p>2 and a half hours tour of Comuna 13 in Medellín, which includes:</p>
+                    <ul>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Transportation within the Comuna.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Natural homemade mango ice cream.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Tour guide from the Comuna.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Dance or freestyle show.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Visit to slides.
+                      </li>
+                    </ul>
+                    <br>
+                    <p><b>Schedule</b>: 9am / 2pm / 5:30pm</p>
+                    <p>* We recommend do the tour in the morning since there are less people.</p>
+                  </div>
+                </div>
+                <p class="read-more" data-tour-info-toggle>Read more...</p>
+              </div>
+              <div class="card__cta">
                 <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                  book now
+                  contact us
                 </a>
-                <button class="btn" data-info-toggle>
-                  more info <i class='bx bx-up-arrow-alt'></i>
-                </button>
               </div>
             </div>
+          </div>
 
-            <div class="tour__info flex flex--column">
-
-              <button class="tour__info--close" data-tour-info-close>
-                <i class='bx bx-x'></i>
-              </button>
-
-              <div class="info__content">
-                <p>2 and a half hours tour of Comuna 13 in Medellín, which includes:</p>
-                  <ul>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Transportation within the Comuna.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Natural homemade mango ice cream.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Tour guide from the Comuna.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Dance or freestyle show.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Visit to slides.
-                    </li>
-                  </ul>
-                  <p><b>Schedule</b>: 9am / 2pm / 5:30pm</p>
-                  <p>* We recommend do the tour in the morning since there are less people.</p>
+          <div class="tour__card card">
+            <img src="../img/tour-centro.jpg" alt="Tour Centro" loading="lazy" class="card__image">
+            <div class="card__content">
+              <div class="card__title flex flex--align-center">
+                <h3 class="card__name col-70">
+                  Medellín Center Tour
+                </h3>
+                <div class="card__price col-30">
+                  <h4>$97.000</h4>
+                  <span class="is-small">Per Person</span>
+                </div>
               </div>
-
-              <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                book now
-              </a>
-
-            </div>
-          </div> 
-
-          <div class="tour__card">
-            <img src="../img/tour-neas.jpg" alt="Pa' las neas Tour" class="card__img" loading="lazy">
-
-            <div class="tour__price">
-              <span>From </span>$75.<span>000 COP</span>
-            </div>
-
-            <div class="card__content flex flex--column">
-              <h3 class="card__title h4 has-ff-alt" data-card-title="Comuna 13">
-                Pa' las neas
-              </h3>
-              <p>
-                If you are looking to have fun with your friends, you will love this experience! Get to know the best breweries and terraces in Comuna 13, a recommended tour to enjoy good company and a good beer.
-              </p>
-              <p class="content__price">
-                <b>Spanish:</b><br> $75.000 COP Per Person ($17 USD)<br><br>
-                <b>English:</b><br> $85.000 COP Per Person ($22 USD)
-              </p>
-
-              <div class="card__cta flex flex--center">
+              <div class="card__description">
+                <p>!Enjoy historical places full of food and music!</p>
+                <div class="card__info">
+                  <div class="info__wrapper">
+                    <p>3 hours tour of the Medellín center, which includes:</p>
+                    <ul>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Bottle of water.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Cheese or chocolo arepa. 
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Souvenir.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Coffee, carajillo or shot of aguardiente.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Medical insurance.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Lunch.
+                      </li>
+                    </ul>
+                    <br>
+                    <p><b>Schedule</b>: 9am / 2pm </p>
+                  </div>
+                </div>
+                <p class="read-more" data-tour-info-toggle>Read more...</p>
+              </div>
+              <div class="card__cta">
                 <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                  book now
+                  contact us
                 </a>
-                <button class="btn" data-info-toggle>
-                  more info <i class='bx bx-up-arrow-alt'></i>
-                </button>
               </div>
             </div>
+          </div>
 
-            <div class="tour__info flex flex--column">
-
-              <button class="tour__info--close" data-tour-info-close>
-                <i class='bx bx-x'></i>
-              </button>
-
-              <div class="info__content">
-                <p>2 and a half hours tour of Comuna 13 in Medellín, which includes:</p>
-                  <ul>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Transportation within the Comuna.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Welcome toast.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      1 craft beer.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      5 shots of liquor.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Street food tasting. 
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Fun expert guide.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Dance or freestyle show.
-                    </li>
-                  </ul>
-                  <p><b>Schedule:</b> 9am / 2pm / 5:30pm</p>
-                  <p>* We recommend do the tour in the morning since there are less people.</p>
+          <div class="tour__card card">
+            <img src="../img/tour-city.jpeg" alt="City Tour" loading="lazy" class="card__image">
+            <div class="card__content">
+              <div class="card__title flex flex--align-center">
+                <h3 class="card__name col-70">
+                  City Tour
+                </h3>
+                <div class="card__price col-30">
+                  <h4>$165.000</h4>
+                  <span class="is-small">Per Person</span>
+                </div>
               </div>
-
-              <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                book now
-              </a>
-
-            </div>
-          </div> 
-
-          <div class="tour__card">
-            <img src="../img/tour-academico.jpg" alt="Academic Tour Comuna 13" class="card__img" loading="lazy">
-
-            <div class="tour__price">
-              <span>From </span>$45.<span>000 COP</span>
-            </div>
-
-            <div class="card__content flex flex--column">
-              <h3 class="card__title" data-card-title="Comuna 13">
-                Academic
-              </h3>
-              <p>
-                A tour where you will learn the history of Comuna 13 with data, stadistics and stories that will help you to understand the cultural and social dynamics of the hood.
-              </p>
-
-              <div class="card__cta flex flex--center">
+              <div class="card__description">
+                <p>!Discover Medellín from its contrasts, stories, gastronomy and people kindness!</p>
+                <div class="card__info">
+                  <div class="info__wrapper">
+                    <p>Full day tour of historic center and Comuna 13, wich includes:</p>
+                    <ul>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Historic center visit.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Cable card and Metro. 
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Comuna 13 Graffitour.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        2 Bottles of water.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Typical Colombian lunch.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Souvenir and postcard.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Coffee, carajillo or shot of Aguardiente.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Natural homemade ice cream.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Dance or freestyle show.
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Transportation by Metro. 
+                      </li>
+                      <li>
+                        <i class='bx bx-check'></i> 
+                        Medical insurance.
+                      </li>
+                    </ul>
+                    <p><b>Schedule</b>: From 9:00am to 6:00pm </p>
+                    <p>* Minimun 4 people.</p>
+                  </div>
+                </div>
+                <p class="read-more" data-tour-info-toggle>Read more...</p>
+              </div>
+              <div class="card__cta">
                 <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                  book now
+                  contact us
                 </a>
-                <button class="btn" data-info-toggle>
-                  more info <i class='bx bx-up-arrow-alt'></i>
-                </button>
               </div>
             </div>
+          </div>
 
-            <div class="tour__info flex flex--column">
-
-              <button class="tour__info--close" data-tour-info-close>
-                <i class='bx bx-x'></i>
-              </button>
-
-              <div class="info__content">
-                <p>2 and a half hours tour of Comuna 13 in Medellín, which includes:</p>
-                  <ul>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Transportation within the Comuna.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Natural homemade mango ice cream.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Tour guide from the Comuna.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Dance or freestyle show.
-                    </li>
-                  </ul>
-                  <p><b>Schedule</b>: 9am / 2pm / 5:30pm</p>
-                  <p>* We recommend do the tour in the morning since there are less people.</p>
+          <div class="tour__card card">
+            <img src="../img/tour-guatape.jpg" alt="Tour Comuna 13" loading="lazy" class="card__image">
+            <div class="card__content">
+              <div class="card__title flex flex--align-center">
+                <h3 class="card__name col-70">
+                  Guatapé Tour
+                </h3>
+                <div class="card__price col-30">
+                  <h4>$</h4>
+                  <span class="is-small">Per Person</span>
+                </div>
               </div>
-
-              <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                book now
-              </a>
-
-            </div>
-          </div> 
-
-          <div class="tour__card">
-            <img src="../img/tour-centro.jpg" alt="Center Tour" class="card__img" loading="lazy">
-
-            <div class="tour__price">
-              <span>From </span>$67.<span>000 COP</span>
-            </div>
-
-            <div class="card__content flex flex--column">
-              <h3 class="card__title">
-                Historical Downtown
-              </h3>
-              <p>
-                A tour to see the historical and architectural value of the center of Medellín and know traditional places full of food, music and history.
-              </p>
-              <p class="content__price">
-                <b>Spanish:</b><br> 
-                $67.000 COP Per Person ($17 USD)<br>
-                $97.000 COP Per Person + lunch ($25 USD)<br><br>
-                <b>English:</b><br> 
-                $77.000 COP Per Person ($20 USD)<br>
-                $107.000 COP Per Person + lunch ($28 USD)
-              </p>
-
-              <div class="card__cta flex flex--center">
+              <div class="card__description">
+                <p>!Lets go to the rock!</p>
+                <div class="card__info">
+                  <div class="info__wrapper">
+                    More info soon...
+                  </div>
+                </div>
+                <p class="read-more" data-tour-info-toggle>Read more...</p>
+              </div>
+              <div class="card__cta">
                 <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                  book now
+                  contact us
                 </a>
-                <button class="btn" data-info-toggle>
-                  more info <i class='bx bx-up-arrow-alt'></i>
-                </button>
               </div>
             </div>
-
-            <div class="tour__info flex flex--column">
-
-              <button class="tour__info--close" data-tour-info-close>
-                <i class='bx bx-x'></i>
-              </button>
-
-              <div class="info__content">
-                <p>3 hours tour of Comuna 13 in Medellín, which includes:</p>
-                  <ul>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Bottle of water.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Arepa of cheese or chocolo.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Souvenir.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Coffee, carajillo or shot of aguardiente.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Medical insurance.
-                    </li>
-                  </ul>
-                  <p><b>Schedule</b>: 9am / 2pm</p>
-              </div>
-
-              <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                book now
-              </a>
-
-            </div>
-          </div> 
-
-          <div class="tour__card">
-            <img src="../img/tour-city.jpeg" alt="City Tour" class="card__img" loading="lazy">
-
-            <div class="tour__price">
-              <span>From </span>$165.<span>000 COP</span>
-            </div>
-
-            <div class="card__content flex flex--column">
-              <h3 class="card__title h4">
-                City Tour
-              </h3>
-              <p>
-                Discover Medellín from its contrasts, stories, gastronomy and people kindness. Historic center and Comuna 13 await for you.
-              </p>
-              <p class="content__price">
-                <b>Spanish:</b><br> $165.000 COP Per Person (42 USD)<br><br>
-                <b>English:</b><br> $175.000 COP Per Person (45 USD)
-              </p>
-
-              <div class="card__cta flex flex--center">
-                <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                  book now
-                </a>
-                <button class="btn" data-info-toggle>
-                  more info <i class='bx bx-up-arrow-alt'></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="tour__info flex flex--column">
-
-              <button class="tour__info--close" data-tour-info-close>
-                <i class='bx bx-x'></i>
-              </button>
-
-              <div class="info__content">
-                <p>Full day tour of historic center and Comuna 13, wich includes:</p>
-                  <ul>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Historic center visit.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Cable card and Metro.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Comuna 13 tour.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      2 Bottles of water.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Typical Colombian lunch.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Souvenir and postcard.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Coffee, carajillo or shot of Aguardiente.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Natural homemade ice cream. 
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Dance or freestyle show.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Transportation.
-                    </li>
-                    <li>
-                      <i class='bx bx-check'></i> 
-                      Medical insurance.
-                    </li>
-                  </ul>
-                  <p><b>Schedule</b>: From 9:00am to 6:00pm </p>
-                  <p>* Minimun 4 people for reservation.</p>
-              </div>
-
-              <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-                book now
-              </a>
-
-            </div>
-          </div> 
+          </div>
 
         </div>
-
         <button class="tours__load-more-btn btn btn--outline" id="load-more">
           show all
         </button>
       </div>
     </section>
 
-    <!-- About section -->
-    <section id="about" class="about">
+    <!-- Comments Section -->
+    <section class="comments section has-bg-alt" id="comments">
+      <div class="container">
+        <h2 class="section__title">
+          Comments
+        </h2>
 
-      <!-- About main -->
-      <article class="about__main section">
-        <div class="container flex">
-          <div class="main__content col">
-            <h2 class="section__title" data-subtitle="about us">
-              Colortour Creative Turism
-            </h2>
+        <div class="comments__container">
+          <div class='sk-ww-google-reviews' data-embed-id='108439'></div>
+        </div>
+      </div>
+    </section>
 
-            <div class="section__content">
+    <!-- About Section -->
+    <section class="about" id="about">
+      <article class="about__company section">
+        <div class="container">
+          <h2 class="section__title" data-subtitle="About Us">
+            <span>Colortour</span> Creative Turism
+          </h2>
+
+          <div class="company__content flex flex--direction-column">
+            <div class="company__text col">
               <p>
                 We are a creative and cultural turism operator located in Comuna 13 of the city of Medellín. We offer experiences in which you can see the transformation of the Comuna through art and color.
               </p>
@@ -556,19 +413,19 @@
                 In six years of operation we have reach different cities and countries sharing our experience and advising on the construction of similar processes.
               </p>
             </div>
-
-          </div>
-          <div class="main__content col">
-            <img src="../img/about.jpg" alt="Colortour Team" class="about__img" loading="lazy">
+            <div class="company__image col">
+              <div class="image__wrapper">
+                <img src="../img/about.jpg" alt="Colortour Team" class="about__img" loading="lazy">
+              </div>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- About team -->
       <article class="about__team section has-bg-alt">
         <div class="container">
           <h2 class="section__title" data-subtitle="our team">
-            Storytelling Experts
+            Expertos en contar historias
           </h2>
 
           <div class="team__cards__container swiper">
@@ -672,7 +529,7 @@
                 <i class='bx bx-chevron-left'></i>
               </div>
               <div class="swiper-button-next">
-                <i class='bx bx-chevron-right' ></i>
+                <i class='bx bx-chevron-right'></i>
               </div>
               
             </div>
@@ -680,26 +537,13 @@
 
         </div>
       </article>
-
-      <!-- About testimonials -->
-      <article class="about__testimonials section">
-        <div class="container">
-          <h2 class="section__title" data-subtitle="testimonials">
-            What people say about us
-          </h2>
-
-          <div class="comments__container">
-            <div class='sk-ww-google-reviews' data-embed-id='108439'></div>
-          </div>
-        </div>
-      </article>
     </section>
 
-    <!-- Projects section -->
-    <section id="projects" class="projects">
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
       <div class="container">
         <div class="projects__wrapper">
-          <div class="projects__content section">
+          <div class="projects__content">
             <h2 class="section__title" data-subtitle="We work for the community">
               Social Projects
             </h2>
@@ -712,13 +556,21 @@
       </div>
     </section>
 
+    <!-- Allies Section -->
+    <section class="allies section has-bg-alt" id="allies">
+      <div class="container">
+        <h2 class="section__title">
+          Our Allies
+        </h2>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__content">
-      <div class="container flex">
-
+  <footer class="footer" data-main>
+    <section class="footer__content section">
+      <div class="container flex flex--direction-column">
         <div class="footer__resume col">
           <h4>Colortour</h4>
           <p>Cultural and Creative Turism</p>
@@ -731,29 +583,6 @@
             </a>
           </div>
         </div>
-
-        <div class="footer__quicklinks col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#tours">Tours</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#about">About us</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="../projects.html">Projects</a>
-            </li>
-          </ul>
-        </div>
-
         <div class="footer__contact col">
           <h4>Contact us</h4>
           <ul>
@@ -771,22 +600,26 @@
                 Cra. 109 #38a3, Veinte De Julio, MED
               </a>
             </li>
+            <li>
+              <i class='bx bx-badge-check'></i>
+              <span>RNT 116960</span>
+            </li>
           </ul>
         </div>
-
+        <div class="footer__legal col">
+          Imágenes importantes
+        </div>
       </div>
-    </div>
-
-    <div class="footer__copy">
+    </section>
+    <section class="footer__copy is-color-invert">
       <div class="container">
         &copy; 2023 <b><a href="#">Colortour</a></b>. All Rights Reserved.
       </div>
-    </div>
-    
+    </section>
   </footer>
 
-  <!-- Floating Social Buttons -->
-  <div class="social-menu flex flex--column">
+  <!-- Social Menu -->
+  <div class="social-menu flex">
     <a href="https://www.instagram.com/colortourtraveling/" target="_blank">
       <i class="bx bxl-instagram"></i>
     </a>
@@ -801,6 +634,6 @@
   <!-- Scripts -->
   <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="../js/script.js" type="module"></script>  
+  <script src="/js/script.js" type="module"></script> 
 </body>
 </html>

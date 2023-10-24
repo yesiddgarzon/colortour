@@ -48,68 +48,74 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif&family=Montserrat&display=swap" rel="stylesheet">
 
   <!-- Styles and Scripts -->
-  <link rel="preload" href="../css/style.css" as="style">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="preload" href="../js/script.js" as="script">  
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="/js/script.js" as="script">  
 </head>
 <body class="projects__page">
-  <!-- RNT -->
-  <div class="rnt">
-    <p class="is-small">RNT: 116960</p>
-  </div>
 
   <!-- Header -->
   <header class="header" data-header>
-    <div class="container flex">
-      <a href="./" class="header__logo">
-        <img src="../img/logo.png" alt="Colortour Logo" class="logo" loading="lazy">
+    <div class="container flex flex--align-center flex--justify-space-between">
+
+      <a href="/" class="header__logo flex flex--align-center">
+        <img src="../img/logo_ctr.svg" alt="Colortour Traveling" loading="lazy">
       </a>
 
       <nav class="main-nav" data-nav>
-        <ul class="nav__menu flex flex--center" data-nav-menu>
-          <li class="nav__item"><a href="#home" class="nav__link" data-nav-link>
-            Home
-          </a></li>
-          <li class="nav__item"><a href="./#tours" class="nav__link" data-nav-link>
-            Tours
-          </a></li>
-          <li class="nav__item"><a href="./#about" class="nav__link" data-nav-link>
-            About Us
-          </a></li>
-          <li class="nav__item"><a href="#home" class="nav__link is-active" data-nav-link>
-            Projects
-          </a></li>
+        <ul class="nav__menu flex">
+          <i class='bx bx-x' data-nav-close></i>
+          <li class="nav__item">
+            <a href="./#home" class="nav__link" data-nav-link>Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#tours" class="nav__link" data-nav-link>Tours</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#about" class="nav__link" data-nav-link>About Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link is-active" data-nav-link>Projects</a>
+          </li>
           <li class="nav__item">
             <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--accent">
-              book now
-            </a>
+              contact us
             </a>
           </li>
         </ul>
       </nav>
 
-      <div class="lang-switcher">
-        <a href="../projects.html" class="lang__item">ES</a> | 
-        <a href="#" class="lang__item is-active">EN</a>
+      <div class="lang-menu">
+        <button class="lang-menu__btn item__link">
+          <img src="../img/flag_us.png" alt="US Flag" class="item__flag" loading="lazy">
+          <span class="item__lang">English</span>
+          <i class='bx bx-chevron-down item__icon'></i>
+        </button>
+        <ul class="lang-menu__list">
+          <li class="lang-menu__item">
+            <a href="../projects.html" class="item__link">
+              <img src="../img/flag_co.png" alt="Colombia Flag" class="item__flag" loading="lazy">
+              <span class="item__lang">Spanish</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <div class="nav__toggle" data-nav-toggle>
-        <i class="hamburger"></i>
-      </div>
+      <i class='bx bx-menu' data-nav-open></i>
 
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="main" id="home" data-main>
+  <!-- Main Content -->
+  <main class="main" data-main>
 
     <section class="projects__section section" id="projects">
       <div class="container">
         <h1 class="section__title" data-subtitle="social commitment">
-          Community Work
+          Social Projects
         </h1>
         <div class="projects__section__content">
           <div class="project__gallery">
@@ -120,7 +126,7 @@
               <div class="project__description flex flex--center">
                 SHOES FOR LOVE
                 <br>
-                This is a Project that helps reduce levels of inequality, providing new shoes or tennis shoes to children in the peripheral neighborhoods of Medellín, dignifying their quality of life and their good development. If you also want to be part of this project and change the lives of many children, contact us!             
+                This is a Project that helps reduce levels of inequality, providing new shoes or tennis shoes to children in the peripheral neighborhoods of Medellín, dignifying their quality of life and their good development. If you also want to be part of this project and change the lives of many children, contact us!s!              
               </div>
             </div>
             <div class="gallery__item">
@@ -130,7 +136,7 @@
               <div class="project__description flex flex--center">
                 FOOD FOR LOVE
                 <br>
-                This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us!             
+                This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us!               
               </div>
             </div>
             <div class="gallery__item">
@@ -150,7 +156,7 @@
               <div class="project__description flex flex--center">
                 FOOD FOR LOVE
                 <br>
-                This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us!              
+                This project seeks to benefit vulnerable families, bringing food to different homes in Medellín, whose economic conditions do not allow them to acquire basic necessities. If you want to be part of the change, contact us!               
               </div>
             </div>
             <div class="gallery__item">
@@ -160,7 +166,7 @@
               <div class="project__description flex flex--center">
                 SHOES FOR LOVE
                 <br>
-                This is a Project that helps reduce levels of inequality, providing new shoes or tennis shoes to children in the peripheral neighborhoods of Medellín, dignifying their quality of life and their good development. If you also want to be part of this project and change the lives of many children, contact us!             
+                This is a Project that helps reduce levels of inequality, providing new shoes or tennis shoes to children in the peripheral neighborhoods of Medellín, dignifying their quality of life and their good development. If you also want to be part of this project and change the lives of many children, contact us!              
               </div>
             </div>
           </div>
@@ -168,20 +174,28 @@
 
         <div class="support__btn">
           <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--fill">
-            Support Us
+            make your donation
           </a>
         </div>
 
       </div>   
     </section>
+    
+    <!-- Allies Section -->
+    <section class="allies section has-bg-alt" id="allies">
+      <div class="container">
+        <h2 class="section__title">
+          Nuestros Aliados
+        </h2>
+      </div>
+    </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__content">
-      <div class="container flex">
-
+  <footer class="footer" data-main>
+    <section class="footer__content section">
+      <div class="container flex flex--direction-column">
         <div class="footer__resume col">
           <h4>Colortour</h4>
           <p>Cultural and Creative Turism</p>
@@ -194,31 +208,8 @@
             </a>
           </div>
         </div>
-
-        <div class="footer__quicklinks col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#tours">Tours</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#about">About us</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="../projects.html">Projects</a>
-            </li>
-          </ul>
-        </div>
-
         <div class="footer__contact col">
-          <h4>Contact us</h4>
+          <h4>Contact Us</h4>
           <ul>
             <li>
               <i class='bx bx-phone' ></i>
@@ -234,22 +225,26 @@
                 Cra. 109 #38a3, Veinte De Julio, MED
               </a>
             </li>
+            <li>
+              <i class='bx bx-badge-check'></i>
+              <span>RNT 116960</span>
+            </li>
           </ul>
         </div>
-
+        <div class="footer__legal col">
+          Imágenes importantes
+        </div>
       </div>
-    </div>
-
-    <div class="footer__copy">
+    </section>
+    <section class="footer__copy is-color-invert">
       <div class="container">
         &copy; 2023 <b><a href="#">Colortour</a></b>. All Rights Reserved.
       </div>
-    </div>
-    
+    </section>
   </footer>
 
-  <!-- Floating Social Buttons -->
-  <div class="social-menu flex flex--column">
+  <!-- Social Menu -->
+  <div class="social-menu flex">
     <a href="https://www.instagram.com/colortourtraveling/" target="_blank">
       <i class="bx bxl-instagram"></i>
     </a>
@@ -262,6 +257,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/js/script.js" type="module"></script>  
+  <script src="/js/script.js" type="module"></script> 
 </body>
 </html>

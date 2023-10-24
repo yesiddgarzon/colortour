@@ -1,0 +1,40 @@
+@use '../abstract' as *
+  
+.container
+  width: $max-width
+  max-width: calc(100% - ($gap))
+  margin-inline: auto
+
+  &.full-width
+    max-width: 100%
+
+.section
+  padding-block: $s-32
+  background-color: $c-bg
+
+  &__title
+    margin-inline: auto
+    text-align: center
+  
+    &::before
+      content: attr(data-subtitle)
+      display: block
+      width: fit-content
+      margin: 0 auto
+      text-transform: uppercase
+      color: $c-text-alt
+      font-weight: $fw-semibold
+      letter-spacing: 3px
+      font-size: $fs-7
+      font-family: $ff-body
+
+.has-bg-alt
+  background: $c-bg-alt !important
+
+.is-color-invert
+  background-color: $c-bg-invert
+  color: $c-text-invert
+
+.swiper-button-next, .swiper-button-prev
+  background: transparent !important
+  border: none !important

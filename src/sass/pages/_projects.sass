@@ -1,17 +1,11 @@
-@use "../abstract" as *
+@use '../abstract' as *
 
 .projects__page
-
-  .header
-    .nav__item .btn
-      display: initial
     
   .project__gallery
     display: grid
     gap: 16px
-
-    +until($tablet)
-      grid-template-columns: 1fr
+    grid-template-columns: 1fr
     
     +from($tablet)
       grid-template-columns: 1fr 1fr
@@ -19,7 +13,7 @@
     .gallery__item
       position: relative
       overflow: hidden
-      border-radius: $radius-24
+      border-radius: $s-24
       
       .gallery__image
         width: 100%
@@ -42,7 +36,7 @@
         height: 100%
         background-color: rgba($c-secondary, .75)
         padding: $s-16
-        color: $c-text-light
+        color: $c-text-invert
         transition: $transition
     
       &:is(:hover, :focus)

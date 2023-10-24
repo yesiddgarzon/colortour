@@ -1,106 +1,78 @@
-@use "../abstract" as *
+@use '../abstract' as *
 
 .tours
   &__wrapper
     flex-wrap: wrap
-    justify-content: center
-  
-  .tour__card
-    position: relative
-    overflow: hidden
-    border-radius: $radius-16
-    box-shadow: $shadow-1
-    transition: $transition
-    background-color: $c-bg
-  
-    &:is(:hover, :focus)
-      box-shadow: $shadow-2
-    
-    &.is-hidden
-      position: absolute
-      clip: rect(0 0 0 0)
-      height: 1px
-      width: 1px
-      margin: -1px
-      padding: 0
-      border: 0
-    
-    +until($mobile)
-      width: 100%
-    
-    +from($mobile)
-      width: calc((100% / 2) - $gap)
-      
-    +from($desktop)
-      width: calc((100% / 3) - $gap)
-    
-    .card__img
-      width: 100%
-    
-    .tour__price
+
+    .tour__card
       position: relative
-      left: 0
-      top: -27px
       width: 100%
-      font-size: $fs-4
-      font-weight: $fw-bold
-      text-align: center
-      border-radius: $radius-16
-      background-color: $c-bg
 
-      span
-        font-size: $fs-7
+      &.is-hidden
+        position: absolute
+        clip: rect(0 0 0 0)
+        height: 1px
+        width: 1px
+        margin: -1px
+        padding: 0
+        border: 0
     
-    .card__title::after
-      content: attr(data-card-title)
-      display: block
-      font-size: $fs-7
-      color: $c-text-alt
-      font-family: $ff-body
-      font-weight: $fw-semibold
 
-    .card__content, .tour__info
-      padding-inline: $s-16
-    
-    .card__content
-      text-align: center
-    
-    .card__title
-      margin-top: 0
-    
-    .card__cta
-      padding-bottom: $s-32
-
-      +until($desktop)
-        flex-direction: column-reverse
+      +from($mobile)
+        width: calc( (100% / 2) - $gap )
       
       +from($desktop)
-        a, button
-          font-size: $fs-7 !important
+        width: calc( (100% / 3) - $gap )
 
-    .tour__info
-      position: absolute
-      left: 0
-      top: 100%
-      width: 100%
-      height: 100%
-      border-radius: $radius-16
-      background-color: transparentize($c-bg, .15)
-      opacity: 0
-      transition: $transition
-    
-      &.is-open
-        top: 0
-        opacity: 1
-      
-      .btn
-        margin-inline: auto
+      .card__image
+        width: 100%
 
-    [data-tour-info-close]
-      font-size: $fs-2
-      font-weight: $fw-bold
-      align-self: flex-end
-      color: $c-text
+      .card__content
+        .card__title
+          padding-block-end: $s-16
+          
+          & *
+            line-height: 1
+            margin: 0
+
+          .card__name
+            &::after
+              content: attr(data-card-subtitle)
+              display: block
+              font-size: $fs-7
+              color: $c-text-alt
+              letter-spacing: 1.5px
+          
+          .card__price h4
+            font-family: $ff-body
+            font-weight: $fw-semibold
+        
+        .card__description
+          .card__info
+            display: grid
+            grid-template-rows: 0fr
+            transition: grid-template-rows 500ms ease-out
+
+            .info__wrapper
+              overflow: hidden
+
+            &.is-open
+              grid-template-rows: 1fr
+
+          .read-more
+            color: $c-text-alt
+            cursor: pointer !important
+            z-index: $z-10
+
+            &:is(:hover, :focus)
+              text-decoration: underline
+                  
+        .card__cta
+          .btn
+            display: block
+            text-align: center
   
   &__load-more-btn
-    margin: $s-32 auto
+    display: block
+    margin-block: $s-16
+    margin-inline: auto

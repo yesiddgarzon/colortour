@@ -1,19 +1,34 @@
-/* Toggle Navigation */
-const navMenu = document.querySelector("[data-nav]"),
-      navToggle = document.querySelector("[data-nav-toggle]"),
-      navLinks = document.querySelectorAll("[data-nav-link]");
+/* Toggle Language Menu */
+const languageMenu = document.querySelector(".lang-menu");
 
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("is-open");
-    navToggle.classList.toggle("is-open");
+if (languageMenu) {
+  languageMenu.addEventListener("click", () => {
+    languageMenu.classList.toggle("is-open");
   })
 }
 
-navLinks.forEach((e) => {
-  e.addEventListener("click", () => {
-    navMenu.classList.toggle("is-open");
-    navToggle.classList.toggle("is-open");
+
+/* Toggle Navigation */
+const navMenu = document.querySelector("[data-nav]"),
+      navOpen = document.querySelector("[data-nav-open]"),
+      navClose = document.querySelector("[data-nav-close]"),
+      navLinks = document.querySelectorAll("[data-nav-link]");
+
+if (navOpen) {
+  navOpen.addEventListener("click", () => {
+    navMenu.classList.add("is-open");
+  })
+}
+
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("is-open");
+  })
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("is-open");
   })
 })
 
@@ -44,55 +59,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-/* Tour Card Show Info */
-const tourCardsToggle = document.querySelectorAll("[data-info-toggle]"),
-      infoCloseBtns = document.querySelectorAll("[data-tour-info-close]"),
-      infoBookBtns = document.querySelectorAll("[data-tour-info-book]");
-
-if(tourCardsToggle) {
-  tourCardsToggle.forEach(e => {
-    e.addEventListener("click", () => {
-      e.parentElement.parentElement.nextElementSibling.classList.add("is-open");
-    });
-  });
-}
-
-if(infoCloseBtns) {
-  infoCloseBtns.forEach(e => {
-    e.addEventListener("click", () => {
-      e.parentElement.classList.remove("is-open");
-    });
-  });
-}
-
-if(infoBookBtns) {
-  infoBookBtns.forEach(e => {
-    e.addEventListener("click", () => {
-      e.parentElement.classList.remove("is-open");
-    });
-  });
-}
-
-/* Load More Function */
-const tourCardsContainer = document.getElementsByClassName(".tours__wrapper"),
-      tourCards = document.querySelectorAll(".tour__card"),
-      loadMoreBtn = document.getElementById("load-more");
-let cardLoad = window.innerWidth > 1024 ? 3 : 2;
-
-tourCards.forEach((e, i) => {
-  if (i > cardLoad - 1) e.classList.add("is-hidden");
-  if (tourCards.length > 2) loadMoreBtn.style.display = "block";
-});
-
-loadMoreBtn.addEventListener("click", () => {
-  [].forEach.call(document.querySelectorAll(".is-hidden"), (e, i) => {
-    if (i < cardLoad + 1) e.classList.remove("is-hidden");
-    if (document.querySelectorAll("is-hidden").length === 0) loadMoreBtn.style.display = "none"
-  });
-});
-
-
 /* Home Carousel */
 const homeCarousel = new Swiper(".home__carousel", {
   slidesPerView: 1,
@@ -113,7 +79,44 @@ const homeCarousel = new Swiper(".home__carousel", {
   },
 });
 
-/* Team Slider */
+/* Read More Tour Card Action */
+const tourInfoToggle = document.querySelectorAll("[data-tour-info-toggle]");
+
+if (tourInfoToggle) {
+  tourInfoToggle.forEach(e => {
+    e.addEventListener("click", () => {
+      e.previousSibling.classList.toggle("is-open");
+
+      console.log(document.documentElement.lang);
+
+      if (document.documentElement.lang == "es") {
+        e.previousSibling.classList.contains("is-open") ? e.innerHTML = "Mostrar menos" : e.innerHTML = "Conoce más..."
+      } else {
+        e.previousSibling.classList.contains("is-open") ? e.innerHTML = "Show less" : e.innerHTML = "Read more..."
+      }
+    });
+  });
+}
+
+/* Load More Tours Button */
+const tourCardsContainer = document.getElementsByClassName(".tours__wrapper"),
+      tourCards = document.querySelectorAll(".tour__card"),
+      loadMoreBtn = document.getElementById("load-more"),
+      cardLoad = 3;
+
+tourCards.forEach((e, i) => {
+  if (i > cardLoad - 1) e.classList.add("is-hidden");
+  if (tourCards.length > 3) loadMoreBtn.style.display = "block";
+});
+      
+loadMoreBtn.addEventListener("click", () => {
+  [].forEach.call(document.querySelectorAll(".is-hidden"), (e, i) => {
+    if (i < cardLoad) e.classList.remove("is-hidden");
+    if (document.querySelectorAll("is-hidden").length === 0) loadMoreBtn.style.display = "none"
+  });
+});
+
+/* Team Swiper */
 const teamSlider = new Swiper('.cards__content', {
   loop: true,
   spaceBetween: 32,

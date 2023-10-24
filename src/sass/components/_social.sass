@@ -1,4 +1,4 @@
-@use "../abstract" as *
+@use '../abstract' as *
 
 .social-menu
   position: fixed
@@ -6,13 +6,14 @@
   top: 50%
   z-index: $z-1000
   padding: $s-8
-  border-radius: $radius-8
+  border-radius: $s-8
   background-color: rgba(0, 0, 0, .7)
+  flex-direction: column
   gap: 0 !important
   
   a 
     font-size: $fs-3
-    color: $c-text-light
+    color: $c-text-invert
     transition: transform .7s ease-in-out
 
     &:hover

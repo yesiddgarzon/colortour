@@ -48,7 +48,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif&family=Montserrat&display=swap" rel="stylesheet">
 
   <!-- Styles and Scripts -->
   <link rel="preload" href="/css/style.css" as="style">
@@ -56,55 +56,61 @@
   <link rel="preload" href="/js/script.js" as="script">  
 </head>
 <body class="projects__page">
-  <!-- RNT -->
-  <div class="rnt">
-    <p class="is-small">RNT: 116960</p>
-  </div>
 
   <!-- Header -->
   <header class="header" data-header>
-    <div class="container flex">
-      <a href="./" class="header__logo">
-        <img src="./img/logo.png" alt="Colortour Logo" class="logo" loading="lazy">
+    <div class="container flex flex--align-center flex--justify-space-between">
+
+      <a href="/" class="header__logo flex flex--align-center">
+        <img src="img/logo_ctr.svg" alt="Colortour Traveling" loading="lazy">
       </a>
 
       <nav class="main-nav" data-nav>
-        <ul class="nav__menu flex flex--center" data-nav-menu>
-          <li class="nav__item"><a href="#home" class="nav__link" data-nav-link>
-            Inicio
-          </a></li>
-          <li class="nav__item"><a href="./#tours" class="nav__link" data-nav-link>
-            Tours
-          </a></li>
-          <li class="nav__item"><a href="./#about" class="nav__link" data-nav-link>
-            Nosotros
-          </a></li>
-          <li class="nav__item"><a href="#home" class="nav__link is-active" data-nav-link>
-            Proyectos
-          </a></li>
+        <ul class="nav__menu flex">
+          <i class='bx bx-x' data-nav-close></i>
+          <li class="nav__item">
+            <a href="#home" class="nav__link" data-nav-link>Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#tours" class="nav__link" data-nav-link>Tours</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link" data-nav-link>Nosotros</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link is-active" data-nav-link>Proyectos</a>
+          </li>
           <li class="nav__item">
             <a href="http://wa.me/573045758866" target="_blank" rel="noopener noreferrer" class="btn btn--accent">
-              reserva ahora
-            </a>
+              contáctanos
             </a>
           </li>
         </ul>
       </nav>
 
-      <div class="lang-switcher">
-        <a href="./" class="lang__item is-active">ES</a> | 
-        <a href="./en/projects.html" class="lang__item">EN</a>
+      <div class="lang-menu">
+        <button class="lang-menu__btn item__link">
+          <img src="img/flag_co.png" alt="Colombia Flag" class="item__flag" loading="lazy">
+          <span class="item__lang">Español</span>
+          <i class='bx bx-chevron-down item__icon'></i>
+        </button>
+        <ul class="lang-menu__list">
+          <li class="lang-menu__item">
+            <a href="en/projects.html" class="item__link">
+              <img src="img/flag_us.png" alt="US Flag" class="item__flag" loading="lazy">
+              <span class="item__lang">English</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <div class="nav__toggle" data-nav-toggle>
-        <i class="hamburger"></i>
-      </div>
+      <i class='bx bx-menu' data-nav-open></i>
 
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="main" id="home" data-main>
+  <!-- Main Content -->
+  <main class="main" data-main>
 
     <section class="projects__section section" id="projects">
       <div class="container">
@@ -174,14 +180,22 @@
 
       </div>   
     </section>
+    
+    <!-- Allies Section -->
+    <section class="allies section has-bg-alt" id="allies">
+      <div class="container">
+        <h2 class="section__title">
+          Nuestros Aliados
+        </h2>
+      </div>
+    </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__content">
-      <div class="container flex">
-
+  <footer class="footer" data-main>
+    <section class="footer__content section">
+      <div class="container flex flex--direction-column">
         <div class="footer__resume col">
           <h4>Colortour</h4>
           <p>Turismo Cultural y Creativo</p>
@@ -194,29 +208,6 @@
             </a>
           </div>
         </div>
-
-        <div class="footer__quicklinks col">
-          <h4>Acceso Rápido</h4>
-          <ul>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#home">Inicio</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#tours">Tours</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="#about">Nosotros</a>
-            </li>
-            <li>
-              <i class='bx bx-chevron-right'></i>
-              <a href="../projects.html">Proyectos</a>
-            </li>
-          </ul>
-        </div>
-
         <div class="footer__contact col">
           <h4>Contáctanos</h4>
           <ul>
@@ -234,22 +225,26 @@
                 Cra. 109 #38a3, Veinte De Julio, MED
               </a>
             </li>
+            <li>
+              <i class='bx bx-badge-check'></i>
+              <span>RNT 116960</span>
+            </li>
           </ul>
         </div>
-
+        <div class="footer__legal col">
+          Imágenes importantes
+        </div>
       </div>
-    </div>
-
-    <div class="footer__copy">
+    </section>
+    <section class="footer__copy is-color-invert">
       <div class="container">
         &copy; 2023 <b><a href="#">Colortour</a></b>. Derechos Reservados
       </div>
-    </div>
-    
+    </section>
   </footer>
 
-  <!-- Floating Social Buttons -->
-  <div class="social-menu flex flex--column">
+  <!-- Social Menu -->
+  <div class="social-menu flex">
     <a href="https://www.instagram.com/colortourtraveling/" target="_blank">
       <i class="bx bxl-instagram"></i>
     </a>
@@ -262,6 +257,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/js/script.js" type="module"></script>  
+  <script src="/js/script.js" type="module"></script> 
 </body>
 </html>

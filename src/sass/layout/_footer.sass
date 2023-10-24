@@ -3,11 +3,6 @@
 .footer
 
   &__content
-    padding-block: 0 $s-32
-
-    .container
-      border-top: $border-1 $c-text-alt
-
     .footer__social
       gap: 8px
 
@@ -15,38 +10,28 @@
         display: grid
         align-items: center
         padding: $s-8
-        border: $border-1 $c-text
-        border-radius: $radius-rounded
+        border: 1px solid $c-text-body
+        border-radius: 50%
         font-size: $fs-4
+        color: $c-text-body
 
         &:is(:hover, :focus)
-          border: $border-1 $c-text-alt
+          border: 1px solid $c-text-alt
           color: $c-text-alt
 
           i
             color: $c-text-alt
-
-    .footer__quicklinks, .footer__contact
+    
+    .footer__contact
       li
         display: flex
         align-items: center
-        justify-content: flex-start
+        gap: $s-8
+        padding-block: $s-8
 
-      i
-        font-size: $fs-5
-        padding: $s-8
+        i
+          font-size: $fs-4
   
   &__copy
-    width: 100%
     padding-block: $s-8
     text-align: center
-    background-color: $c-bg-alt
-
-  +until($mobile)
-    .container.flex
-      flex-direction: column
-  
-  +from($mobile)
-    .container.flex
-      flex-direction: row
-  

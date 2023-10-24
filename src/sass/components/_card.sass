@@ -1,0 +1,18 @@
+@use '../abstract' as *
+
+.card
+  position: relative
+  background-color: $c-bg
+  border-radius: $s-8
+  box-shadow: $shadow
+  max-width: 100%
+  overflow: hidden
+
+  &:is(:hover, :focus)
+    box-shadow: $shadow-hover
+
+  &__content
+    position: relative
+    padding: $s-16
+    background-color: $c-bg
+

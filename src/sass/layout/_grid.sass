@@ -1,15 +1,35 @@
-@use "../abstract" as *
+@use '../abstract' as *
 
 .flex
   display: flex
   gap: $gap
 
-  &--center
-    align-items: center
-    justify-content: center
+  &--direction-column
+    flex-direction: column
 
-  &--column
-    flex-direction: column 
+    +from($tablet)
+      flex-direction: row
+  
+  &--direction-column-reverse
+    flex-direction: column-reverse
+
+  &--align-center
+    align-items: center
+  
+  &--justify-center
+    justify-content: center
+  
+  &--justify-space-between
+    justify-content: space-between
+  
+  &--justify-space-around
+    justify-content: space-around
 
 .col
   flex: 1 1 0
+
+.col-70
+  flex-basis: 70%
+
+.col-30
+  flex-basis: 30%

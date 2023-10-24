@@ -1,54 +1,44 @@
-@use "../abstract" as *
+@use '../abstract' as *
 
 .home
-  .home__carousel
-    height: auto
-
-  .swiper-button-next, .swiper-button-prev 
-    display: none
+  .swiper-button-next::after, .swiper-button-prev::after
+    content: ''
+  
+  .swiper-button-next, .swiper-button-prev
+    color: $c-text-accent
+    font-size: $fs-2
 
     +from($tablet)
-      display: initial
-      width: auto
-      height: auto
-      padding: 0
-      background-color: transparent
-      border: none
-      color: $c-text-accent
+      font-size: $fs-display
+  
+  .swiper-button-prev
+    left: 0
 
+    +from($tablet)
+      left: $s-16
+
+  .swiper-button-next
+    right: 0
+
+    +from($tablet)
+      right: $s-16
+  
   .swiper-pagination-bullet
     background-color: $c-accent
 
-  .home__cta 
+  
+  &__cta
     width: 100%
     background-color: $c-bg-invert
     overflow: hidden
-
-  .home__cta a:is(:hover, :focus)
-    color: inherit
-
-  .home__cta a
-    position: relative
-
-  .home__cta h1
-    position: relative
-    margin: 0
-    width: 100ch
-    max-width: 100ch
     padding-block: $s-4
-    transform: translateX(100%)
-    animation: scroll-text 10s linear infinite
-    color: $c-text-accent
 
-@keyframes scroll-text
-  from 
-    transform: translateX(100%)
-  to
-    transform: translateX(-100%)
-
-+from($desktop)
-  @keyframes scroll-text
-    from 
-      transform: translateX(130%)
-    to
-      transform: translateX(-100%)
+    a
+      position: relative
+      
+    h1
+      positin: relative
+      margin: 0
+      width: 97ch
+      color: $c-text-accent
+      animation: scroll-text 15s linear infinite

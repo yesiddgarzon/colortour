@@ -1,25 +1,20 @@
-@use "../abstract" as *
+@use '../abstract' as *
 
-header
+.header
   width: 100%
-  background-color: $c-bg
-  padding-block: $s-16
-  z-index: $z-100
+  background-color: $c-bg-invert
+  color: $c-text-invert
   transition: $transition
+  padding-block: $s-8
+  z-index: $z-100
+  
+  [data-nav-open], [data-nav-close]
+    font-size: $fs-4
+    cursor: pointer
 
-  .flex
-    justify-content: space-between
-    align-items: center
+    +from($tablet)
+      display: none
 
   &.is-sticky
     position: fixed
-    box-shadow: $shadow-1
-
-    .nav__item .btn
-      display: inherit
-  
-  .header__logo img
-    width: 100%
-    max-width: 50px
-    height: 40px
-    vertical-align: middle
+    box-shadow: $shadow-hover
