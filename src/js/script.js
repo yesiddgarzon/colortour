@@ -7,7 +7,6 @@ if (languageMenu) {
   })
 }
 
-
 /* Toggle Navigation */
 const navMenu = document.querySelector("[data-nav]"),
       navOpen = document.querySelector("[data-nav-open]"),

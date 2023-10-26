@@ -1,6 +1,5 @@
 @use '../abstract' as *
 
-
 .btn
   padding: $s-4 $s-16
   border: 2px solid $c-bg-alt
@@ -12,6 +11,7 @@
   transition: $transition
   color: $c-text-body
   cursor: pointer
+  letter-spacing: 0.0625rem
 
   &:is(:hover, :focus)
     background-color: $c-bg
@@ -27,7 +27,7 @@
   
   &--accent
     background-color: $c-bg-accent
-    color: $c-text-body
+    color: $c-text-title
     border-color: $c-accent
 
     &:is(:hover, :focus)
@@ -42,11 +42,12 @@
     &:is(:hover, :focus)
       background-color: transparent
       border-color: $c-bg-invert
-      color: $c-text-body
+      color: $c-text-title
 
   &--outline
     background-color: transparent
     border-color: $c-bg-invert
+    color: $c-text-title
 
     &:is(:hover, :focus)
       background-color: $c-bg-invert

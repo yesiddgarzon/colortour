@@ -1,18 +1,19 @@
 /* Colors */
-$c-primary: rgb(255, 255, 255)
-$c-primary-alt: rgb(246, 250, 238)
-$c-secondary: rgb(24, 30, 15)
-$c-secondary-alt: rgb(134, 151, 107)
-$c-accent: rgb(165, 255, 31)
+$c-hue: 84
+$c-primary: hsl($c-hue, 0%, 100%)
+$c-primary-alt: hsl($c-hue, 50%, 98%)
+$c-secondary: hsl($c-hue, 10%, 12%)
+$c-secondary-alt: hsl($c-hue, 4%, 40%)
+$c-accent: hsl($c-hue, 100%, 56%)
 
 $c-bg: $c-primary
 $c-bg-alt: $c-primary-alt
 $c-bg-invert: $c-secondary
 $c-bg-accent: $c-accent
 
-$c-text-body: rgb(73, 73, 73)
+$c-text-body: $c-secondary-alt
 $c-text-title: $c-secondary
-$c-text-alt: $c-secondary-alt
+$c-text-alt: darken($c-accent, 30%)
 $c-text-invert: $c-primary
 $c-text-accent: $c-accent
 
