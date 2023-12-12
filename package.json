@@ -1,7 +1,7 @@
 {
-  "name": "starter-kit",
+  "name": "colortour",
   "version": "1.0.0",
-  "description": "",
+  "description": "Colortour Official Website",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
@@ -16,7 +16,7 @@
     "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
     "watch:img": "onchange 'src/images' -- npm run build:img",
     "watch:html": "onchange 'src/**/*.html' -- npm run build:html",
-    "serve": "browser-sync dist -w -b '/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'",
+    "serve": "browser-sync dist -w",
     "build": "run-s clean build:*",
     "dev": "npm run build && run-p serve watch:*"
   },
@@ -24,7 +24,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^2.23.7",
     "html-minifier-terser": "^7.2.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
