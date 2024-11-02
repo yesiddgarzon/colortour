@@ -55,9 +55,6 @@
       border-radius: $s-24
       overflow: hidden
 
-      &:is(:hover, :focus) .card__data
-        bottom: 0
-
     .card__wrapper
       position: relative
 
@@ -65,25 +62,20 @@
       background-color: $c-bg
 
     .card__data
-      position: absolute
-      left: 0
-      bottom: -100px
-      width: 100%
-      padding-block: $s-16
+      padding: $s-16
       z-index: $z-10
       background-color: $c-bg
-      text-align: center
-      transition: $transition
+      justify-content: space-between
 
     .card__img
       width: 100%
       height: auto
       position: relative
 
-    .card__name
+    .card__data-name
       margin: 0
 
-    .card__description
+    .card__data-description
       color: $c-text-alt
 
     .card__social
