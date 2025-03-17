@@ -1,0 +1,46 @@
+@use "../abstract" as *
+
+.footer
+
+  &__resume
+    p:first-of-type
+      margin: 0
+
+  &__logo
+    height: 40px
+
+  &__social
+    gap: 8px
+
+    a
+      display: grid
+      align-items: center
+      padding: $s-8
+      border: 1px solid $c-text-body
+      border-radius: 50%
+      font-size: $fs-4
+      color: $c-text-body
+
+      &:is(:hover, :focus)
+        border: 1px solid $c-text-alt
+        color: $c-text-alt
+
+        i
+          color: $c-text-alt
+  
+  &__contact
+    li
+      display: flex
+      align-items: center
+      gap: $s-8
+      padding-block: $s-8
+
+      i
+        font-size: $fs-4
+  
+  &__copy
+    padding-block: $s-8
+    text-align: center
+
+    a
+      color: $c-text-accent !important

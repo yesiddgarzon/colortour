@@ -1,0 +1,59 @@
+@use '../abstract' as *
+
+.main-nav
+  position: fixed
+  left: 100%
+  top: 0
+  bottom: 0
+  width: 100%
+  backdrop-filter: blur(1px)
+  transition: $transition
+  z-index: $z-1000
+
+  .nav__menu
+    height: 100%
+    padding-inline: $s-32
+    margin-left: calc($s-32 * 2)
+    background-color: $c-bg-invert
+    flex-direction: column
+
+    i
+      position: relative
+      top: $s-16
+      left: 90%
+
+    .nav__link
+      position: relative
+      color: $c-text-invert
+
+      &:is(:hover, :focus), &.is-active
+        color: $c-text-accent
+      
+      &::after
+        position: absolute
+        left: 0
+        bottom: -4px
+        content: ''
+        width: 0
+        height: 3px
+        border-radius: $s-4
+        background-color: $c-bg-accent
+        transition: $transition
+      
+      &:is(:hover, :focus)::after
+        width: 80%
+      
+      &.is-active::after
+        width: 20px
+  
+  &.is-open
+    left: 0
+  
+  +from($tablet)
+    position: static
+    
+    .nav__menu
+      flex-direction: row
+      justify-content: center
+    
+    

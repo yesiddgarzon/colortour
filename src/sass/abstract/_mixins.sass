@@ -1,0 +1,9 @@
+@use 'variables' as *
+
+=until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=from($device)
+  @media screen and (min-width: $device)
+    @content

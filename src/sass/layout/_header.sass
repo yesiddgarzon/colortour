@@ -1,0 +1,24 @@
+@use '../abstract' as *
+
+.header
+  width: 100%
+  background-color: $c-bg-invert
+  color: $c-text-invert
+  transition: $transition
+  padding-block: $s-8
+  z-index: $z-100
+  
+  [data-nav-open], [data-nav-close]
+    font-size: $fs-4
+    cursor: pointer
+
+    +from($tablet)
+      display: none
+
+  &.is-sticky
+    position: fixed
+    box-shadow: $shadow-hover
+  
+  &__logo
+    img
+      height: 48px

@@ -1,0 +1,82 @@
+@use '../abstract' as *
+
+.about
+
+  &__company
+    .company__content
+      +from($tablet)
+        flex-direction: row-reverse !important
+      
+      .company__image
+        
+        .image__wrapper
+          border-radius: $s-16
+          overflow: hidden
+          min-height: 250px
+        
+        .about__img
+          width: 100%
+          transform: scale(1.5)
+
+          +from($tablet)
+            transform: scale(1.2)
+          
+          +from($wide)
+            transform: scale(1)
+  
+  &__team
+    .team__cards__container
+      padding-block: 1rem
+
+      .swiper-button-prev:after, .swiper-button-next:after
+        content: ""
+      
+      .swiper-button-prev, .swiper-button-next
+        width: initial
+        height: initial
+        padding: 0
+        background: transparent
+        border: none
+        font-size: $fs-1
+        color: $c-text-alt
+        
+      .swiper-button-prev
+        left: -1rem
+
+      .swiper-button-next 
+        right: -1rem
+
+    .cards__content
+      margin-inline: 1.75rem
+      border-radius: $s-24
+      overflow: hidden
+
+    .team__card
+      border-radius: $s-24
+      overflow: hidden
+
+    .card__wrapper
+      position: relative
+
+    .card__image
+      background-color: $c-bg
+
+    .card__data
+      padding: $s-16
+      z-index: $z-10
+      background-color: $c-bg
+      justify-content: space-between
+
+    .card__img
+      width: 100%
+      height: auto
+      position: relative
+
+    .card__data-name
+      margin: 0
+
+    .card__data-description
+      color: $c-text-alt
+
+    .card__social
+      font-size: $fs-1

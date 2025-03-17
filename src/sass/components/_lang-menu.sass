@@ -1,0 +1,50 @@
+@use '../abstract' as *
+
+.lang-menu
+  cursor: pointer
+  z-index: $z-100
+
+  &__list
+    position: absolute
+    padding: $s-16
+    border-radius: $s-8
+    box-shadow: $shadow-hover
+    transform: translateX(-16px)
+    background-color: $c-bg
+    transition: $transition
+    visibility: hidden
+
+    .lang-menu__item
+      padding-inline: 12px
+
+    .item__link
+      color: $c-text-body
+
+      &:is(:hover, :focus)
+        color: $c-text-alt
+
+  &__btn
+    all: unset
+
+    .item__icon
+      transition: $transition
+  
+  .item__link
+    display: flex
+    align-items: center
+    justify-content: space-around
+    gap: 6px
+  
+    .item__flag
+      width: 24px
+      height: 24px
+      border-radius: 50%
+  
+  &.is-open
+    .item__icon
+      transform: rotate(180deg)
+      
+    .lang-menu__list
+      margin-top: $s-8
+      visibility: visible
+      
